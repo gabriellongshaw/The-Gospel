@@ -1,0 +1,95 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Everlight — Spreading the Gospel</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/images/logo.png" alt="Logo">
+        <h1>Everlight</h1>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="/resources/resource1/">Resources</a>
+        <a href="/charlie-kirk/">Charlie Kirk</a>
+        <a href="/billy-graham/">Billy Graham</a>
+        <a href="/stuart-knechtle/">Stuart Knechtle</a>
+        <a href="/resources/resource2/">More</a>
+      </nav>
+
+      <button class="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu container" data-open="false" style="display:none;">
+      <a href="index.html">Home</a>
+      <a href="/resources/resource1/">Resources</a>
+      <a href="/charlie-kirk/">Charlie Kirk</a>
+      <a href="/billy-graham/">Billy Graham</a>
+      <a href="/stuart-knechtle/">Stuart Knechtle</a>
+      <a href="/resources/resource2/">More</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h2>Share the Good News</h2>
+        <p class="lead">Everlight exists to share the gospel with clarity, compassion, and truth. We present scripture, testimonies, and resources to help people explore faith.</p>
+        <p class="verse">"For God so loved the world..." — John 3:16</p>
+        <p class="meta">Short meditation:</p>
+        <p>Jesus came to reconcile us to God and to show us the way to new life. Consider Romans 6:23 — "For the wages of sin is death, but the gift of God is eternal life." Explore, ask questions, and find community.</p>
+        <p><a class="btn" href="#learn">Learn More</a></p>
+      </div>
+
+      <aside class="hero-card">
+        <img src="assets/images/hero.jpg" alt="Hands holding Bible" style="width:100%;border-radius:10px;margin-bottom:12px;object-fit:cover">
+        <p class="meta">Quick links</p>
+        <p><a href="/billy-graham/" class="btn" style="display:inline-block">Billy Graham</a></p>
+      </aside>
+    </section>
+
+    <section id="learn" class="content">
+      <div class="card-grid">
+        <article class="card">
+          <h3>Who is Jesus?</h3>
+          <p>Jesus of Nazareth is the central figure of Christianity. He lived, taught, died, and rose again — offering forgiveness and new life to all who trust Him.</p>
+          <p class="verse">"I am the way, the truth, and the life." — John 14:6</p>
+        </article>
+
+        <article class="card">
+          <h3>Scripture</h3>
+          <p>The Bible points us to God’s character, our need for grace, and the hope of redemption. Read passages like Psalm 23 and Romans 8 for comfort and assurance.</p>
+        </article>
+
+        <article class="card">
+          <h3>Get Involved</h3>
+          <p>Join a local church, serve your community, and grow in faith through study and prayer. Use the Resources pages to add videos, testimonies, and images.</p>
+        </article>
+      </div>
+
+      <div class="hero-card" style="margin-top:18px">
+        <h3 class="center">Featured Scripture</h3>
+        <p class="center verse">"The Lord is my shepherd; I shall not want." — Psalm 23:1</p>
+        <p class="meta center">Short reflection: God cares for us personally and leads us into life.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Everlight — spreading the gospel with compassion. © <span id="year"></span></p>
+      <p class="meta">Built to be simple and shareable.</p>
+    </footer>
+  </main>
+
+  <script src="assets/js/app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
