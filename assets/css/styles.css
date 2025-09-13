@@ -38,7 +38,7 @@ img {
   --icon: #222222;
   --accent: rgba(13,110,253,1);
   --hero-accent: rgba(0,0,0,0.08);
-  --hover-bg: rgba(0,0,0,0.06);
+  --hover-bg: #e9ecef;
 }
 
 body.dark {
@@ -51,7 +51,7 @@ body.dark {
   --icon: #eaeaea;
   --accent: rgba(124,231,217,1);
   --hero-accent: rgba(0,0,0,0.3);
-  --hover-bg: rgba(255,255,255,0.05);
+  --hover-bg: #15222b;
 }
 
 .header {
@@ -100,6 +100,7 @@ body.dark {
   transition: color 0.2s, background 0.2s;
   padding: 4px 6px;
   border-radius: 4px;
+  white-space: nowrap;
 }
 
 .nav a:hover {
@@ -433,10 +434,28 @@ body.dark .theme-toggle .moon {
     padding: 1rem;
     font-size: 0.85rem;
   }
+   .hero-card,
+  .daily-verse-card,
+  .card {
+    background: var(--card-bg);
+    color: var(--text);
+  }
 }
 
 /* Mobile landscape / small tablets */
 @media (max-width: 900px) and (orientation: landscape) {
+  .nav {
+    display: none !important;
+  }
+
+  .burger {
+    display: flex !important;
+  }
+
+  .desktop-theme-toggle {
+    display: none !important;
+  }
+  
   .hero {
     grid-template-columns: 1fr;
     padding: 0.8rem 1rem;
@@ -478,6 +497,12 @@ body.dark .theme-toggle .moon {
   .footer p {
     font-size: 0.5rem;
   }
+   .hero-card,
+  .daily-verse-card,
+  .card {
+    background: var(--card-bg);
+    color: var(--text);
+  }
 }
 
 /* Large desktops / wide monitors */
@@ -509,6 +534,12 @@ body.dark .theme-toggle .moon {
     padding: 2.5rem;
     font-size: 1rem;
   }
+   .hero-card,
+  .daily-verse-card,
+  .card {
+    background: var(--card-bg);
+    color: var(--text);
+  }
 }
 
 /* Extra-wide screens (ultra-wide monitors) */
@@ -526,5 +557,11 @@ body.dark .theme-toggle .moon {
   .footer {
     padding: 3rem;
     font-size: 1.1rem;
+  }
+   .hero-card,
+  .daily-verse-card,
+  .card {
+    background: var(--card-bg);
+    color: var(--text);
   }
 }
