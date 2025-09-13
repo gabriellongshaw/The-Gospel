@@ -18,6 +18,7 @@
         <img src="../assets/images/logo.png" alt="Logo">
         <h1>The Gospel</h1>
       </a>
+
       <nav class="nav" aria-label="Main navigation">
         <a href="../index.html">Home</a>
         <a href="index.html" class="active">Resources</a>
@@ -26,30 +27,33 @@
         <a href="../cliff-and-stuart-knetchle/">Stuart Knechtle</a>
         <a href="../more/">More</a>
       </nav>
+
       <div class="controls">
         <button class="theme-toggle desktop-theme-toggle" aria-label="Toggle theme">
           <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="5" fill="var(--icon)" stroke="var(--icon)" stroke-width="2"/>
-            <g stroke-linecap="round" stroke-linejoin="round" stroke="var(--icon)">
-              <line x1="12" y1="1" x2="12" y2="3" />
-              <line x1="12" y1="21" x2="12" y2="23" />
-              <line x1="1" y1="12" x2="3" y2="12" />
-              <line x1="21" y1="12" x2="23" y2="12" />
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            <circle cx="12" cy="12" r="5"/>
+            <g stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
             </g>
           </svg>
           <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path fill="var(--icon)" d="M21 12.8A9 9 0 1111.2 3a7 7 0 109.8 9.8z"/>
+            <path d="M21 12.8A9 9 0 1111.2 3a7 7 0 109.8 9.8z"/>
           </svg>
         </button>
+
         <button class="burger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
+
     <div class="mobile-menu" aria-hidden="true">
       <button class="close-btn" aria-label="Close menu">&times;</button>
       <ul>
@@ -62,20 +66,20 @@
       </ul>
       <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme">
         <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="5" fill="var(--icon)" stroke="var(--icon)" stroke-width="2"/>
-          <g stroke-linecap="round" stroke-linejoin="round" stroke="var(--icon)">
-            <line x1="12" y1="1" x2="12" y2="3" />
-            <line x1="12" y1="21" x2="12" y2="23" />
-            <line x1="1" y1="12" x2="3" y2="12" />
-            <line x1="21" y1="12" x2="23" y2="12" />
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          <circle cx="12" cy="12" r="5"/>
+          <g stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
           </g>
         </svg>
         <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path fill="var(--icon)" d="M21 12.8A9 9 0 1111.2 3a7 7 0 109.8 9.8z"/>
+          <path d="M21 12.8A9 9 0 1111.2 3a7 7 0 109.8 9.8z"/>
         </svg>
       </button>
     </div>
@@ -89,28 +93,103 @@
       </div>
     </section>
 
+    <!-- Videos Section -->
     <section class="content">
       <h3>Pinned Videos</h3>
-      <div class="video-scroll">
-        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID1"></iframe></article>
-        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID2"></iframe></article>
-        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID3"></iframe></article>
-        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID4"></iframe></article>
-        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID5"></iframe></article>
+      <div class="video-row">
+        <article class="video-card">
+          <h4>Why Jesus?</h4>
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID1" allowfullscreen></iframe>
+        </article>
+        <article class="video-card">
+          <h4>Overcoming Doubt</h4>
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID2" allowfullscreen></iframe>
+        </article>
+        <article class="video-card">
+          <h4>Faith and Hope</h4>
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID3" allowfullscreen></iframe>
+        </article>
+        <article class="video-card">
+          <h4>Jesus’ Love</h4>
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID4" allowfullscreen></iframe>
+        </article>
+        <article class="video-card">
+          <h4>Walking in Grace</h4>
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID5" allowfullscreen></iframe>
+        </article>
       </div>
-    </section>
 
-    <section class="content">
       <h3>More Videos</h3>
-      <div class="video-scroll">
-        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID6"></iframe></article>
-        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID7"></iframe></article>
-        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID8"></iframe></article>
-        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID9"></iframe></article>
-        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID10"></iframe></article>
+      <div class="video-row">
+        <article class="video-card">
+          <h4>Prayer Power</h4>
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID6" allowfullscreen></iframe>
+        </article>
+        <article class="video-card">
+          <h4>Strength in Trials</h4>
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID7" allowfullscreen></iframe>
+        </article>
+        <article class="video-card">
+          <h4>Forgiveness</h4>
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID8" allowfullscreen></iframe>
+        </article>
+        <article class="video-card">
+          <h4>Living Faith</h4>
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID9" allowfullscreen></iframe>
+        </article>
+        <article class="video-card">
+          <h4>Hope in Christ</h4>
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID10" allowfullscreen></iframe>
+        </article>
+        <div class="video-card">
+  <a href="https://www.instagram.com/reel/C-N6CGfvthD/?igsh=ZGRnaWh5YWRndXo=" target="_blank" rel="noopener">
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C-N6CGfvthD/?igsh=ZGRnaWh5YWRndXo=" data-instgrm-version="14"></blockquote>
+    <h4>Mark 8:34 | Billy Graham</h4>
+  </a>
+</div>
+        <article class="video-card">
+  <a href="https://www.instagram.com/reel/CzfSSsjSnr3/" target="_blank" rel="noopener">
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CzfSSsjSnr3/" data-instgrm-version="14"></blockquote>
+    <h4>Christianity is the True Religion</h4>
+  </a>
+</article>
+<script async src="//www.instagram.com/embed.js"></script>
+<div class="video-card">
+  <a href="https://www.instagram.com/reel/DM9pSd4NLnW/?igsh=MWFyMGh1dXloZTcxaw==" target="_blank" rel="noopener">
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DM9pSd4NLnW/?igsh=MWFyMGh1dXloZTcxaw==" data-instgrm-version="14"></blockquote>
+    <h4>Jesus Help us | Billy Graham</h4>
+  </a>
+</div>
+
+<div class="video-card">
+  <a href="https://www.instagram.com/reel/DH_kUCtIyMB/?igsh=MXJtamMxMGJ4cGdoYg==" target="_blank" rel="noopener">
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DH_kUCtIyMB/?igsh=MXJtamMxMGJ4cGdoYg==" data-instgrm-version="14"></blockquote>
+    <h4>Jesus loves you | Cliffe Knetchle</h4>
+  </a>
+</div>
+
+<div class="video-card">
+  <a href="https://www.instagram.com/reel/DI8O6GgNpmL/?igsh=MXBzcTJ4OTk5YXQ0Mg==" target="_blank" rel="noopener">
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DI8O6GgNpmL/?igsh=MXBzcTJ4OTk5YXQ0Mg==" data-instgrm-version="14"></blockquote>
+    <h4>Gods letter to the doubting heart | Jonny Keith</h4>
+  </a>
+</div>
+
+<div class="video-card">
+  <a href="https://www.instagram.com/reel/DJ_wYxUNMdw/?igsh=MmFvMjIxZTM2eWc2" target="_blank" rel="noopener">
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DJ_wYxUNMdw/?igsh=MmFvMjIxZTM2eWc2" data-instgrm-version="14"></blockquote>
+    <h4>Mark 8:34 | Billy Graham</h4>
+  </a>
+</div>
+
+<div class="video-card">
+  <a href="https://www.youtube.com/watch?v=B_XAlrmnjcI" target="_blank" rel="noopener">
+    <img src="https://img.youtube.com/vi/B_XAlrmnjcI/hqdefault.jpg" alt="God's Healing For Long-Term Conditions | Joseph Prince">
+    <h4>God's Healing For Long-Term Conditions | Joseph Prince</h4>
+  </a>
+</div>
       </div>
     </section>
-
     <section class="content">
       <h3>Bible for How You’re Feeling</h3>
       <div class="card-grid">
@@ -121,6 +200,7 @@
       </div>
     </section>
 
+    <!-- Bible Apps Section -->
     <section class="content">
       <h3>Download a Bible App</h3>
       <div>
@@ -135,6 +215,7 @@
     <p>© <span id="year"></span> The Gospel — a website made by Gabriel Longshaw to spread the good news.</p>
     <p class="meta">Built to be simple and shareable.</p>
   </footer>
+
   <script src="../assets/js/main.js"></script>
 </body>
 </html>
