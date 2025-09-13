@@ -177,12 +177,12 @@ body.dark .theme-toggle .moon {
 
 .hero {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
   gap: 1.5rem;
-  grid-template-columns: 2fr 1fr;
   max-width: 1200px;
-  margin: 0 auto; 
+  margin: 0 auto;
   padding: 2rem 1rem;
-  background: var(--bg);
 }
 
 .hero-card {
@@ -192,7 +192,7 @@ body.dark .theme-toggle .moon {
   position: relative;
   box-shadow: 0 4px 12px var(--hero-accent);
   max-width: 900px;
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 
 .hero-card h3 {
@@ -348,13 +348,14 @@ body.dark .theme-toggle .moon {
 }
 
 .daily-verse-card {
-  background: var(--bg);
-  padding: 1rem;
+  background: var(--card-bg); /* change from var(--bg) to match hero cards */
+  padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid var(--border);
-  box-shadow: none;
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem auto; /* center horizontally */
+  max-width: 600px; /* limit width */
+  box-shadow: 0 4px 12px var(--hero-accent); /* optional for visual consistency */
 }
 
 
@@ -484,6 +485,7 @@ body.dark .theme-toggle .moon {
   .hero {
     max-width: 1800px;
     gap: 3rem;
+    justify-content: center;
   }
   
   .header-inner {
@@ -514,6 +516,7 @@ body.dark .theme-toggle .moon {
   .hero {
     max-width: 2200px;
     gap: 4rem;
+    justify-content: center;
   }
   
   .hero-card {
