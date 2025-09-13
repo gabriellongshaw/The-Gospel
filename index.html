@@ -1,41 +1,91 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Everlight — Spreading the Gospel</title>
+  <title>The Gospel</title>
+  <script>
+    // Immediately apply dark mode if system prefers
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">
+      <a href="#" class="brand">
         <img src="assets/images/logo.png" alt="Logo">
-        <h1>Everlight</h1>
+        <h1>The Gospel</h1>
       </a>
 
       <nav class="nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="/resources/resource1/">Resources</a>
-        <a href="/charlie-kirk/">Charlie Kirk</a>
-        <a href="/billy-graham/">Billy Graham</a>
-        <a href="/stuart-knechtle/">Stuart Knechtle</a>
-        <a href="/resources/resource2/">More</a>
+        <a href="/index.html">Home</a>
+        <a href="#">Resources</a>
+        <a href="/charlie-kirk">Charlie Kirk</a>
+        <a href="/billy-graham">Billy Graham</a>
+        <a href="/cliff-and-stuart-knetchle">Stuart Knechtle</a>
+        <a href="#">More</a>
       </nav>
 
-      <button class="burger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="controls">
+        <button class="theme-toggle desktop-theme-toggle" aria-label="Toggle theme">
+          <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="5" fill="var(--icon)" stroke="var(--icon)" stroke-width="2"/>
+            <g stroke-linecap="round" stroke-linejoin="round" stroke="var(--icon)">
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </g>
+          </svg>
+          <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path fill="var(--icon)" d="M21 12.8A9 9 0 1111.2 3a7 7 0 109.8 9.8z"/>
+          </svg>
+        </button>
+
+        <button class="burger" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
 
-    <div class="mobile-menu container" data-open="false" style="display:none;">
-      <a href="index.html">Home</a>
-      <a href="/resources/resource1/">Resources</a>
-      <a href="/charlie-kirk/">Charlie Kirk</a>
-      <a href="/billy-graham/">Billy Graham</a>
-      <a href="/stuart-knechtle/">Stuart Knechtle</a>
-      <a href="/resources/resource2/">More</a>
+    <div class="mobile-menu" aria-hidden="true">
+      <button class="close-btn" aria-label="Close menu">&times;</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="/charlie-kirk">Charlie Kirk</a></li>
+        <li><a href="/billy-graham">Billy Graham</a></li>
+        <li><a href="/cliff-and-stuart-knetchle">Stuart Knechtle</a></li>
+        <li><a href="#">More</a></li>
+      </ul>
+
+      <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme">
+        <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="5" fill="var(--icon)" stroke="var(--icon)" stroke-width="2"/>
+          <g stroke-linecap="round" stroke-linejoin="round" stroke="var(--icon)">
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </g>
+        </svg>
+        <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path fill="var(--icon)" d="M21 12.8A9 9 0 1111.2 3a7 7 0 109.8 9.8z"/>
+        </svg>
+      </button>
     </div>
   </header>
 
@@ -43,18 +93,12 @@
     <section class="hero">
       <div class="hero-card">
         <h2>Share the Good News</h2>
-        <p class="lead">Everlight exists to share the gospel with clarity, compassion, and truth. We present scripture, testimonies, and resources to help people explore faith.</p>
+        <p class="lead">The Gospel exists to share the good news with clarity, compassion, and truth. We present scripture, testimonies, and resources to help people explore faith.</p>
         <p class="verse">"For God so loved the world..." — John 3:16</p>
         <p class="meta">Short meditation:</p>
-        <p>Jesus came to reconcile us to God and to show us the way to new life. Consider Romans 6:23 — "For the wages of sin is death, but the gift of God is eternal life." Explore, ask questions, and find community.</p>
+        <p>Jesus came to reconcile us to God and to show us the way to new life. Consider Romans 6:23 — "For the wages of sin is death, but the gift of God is eternal life."</p>
         <p><a class="btn" href="#learn">Learn More</a></p>
       </div>
-
-      <aside class="hero-card">
-        <img src="assets/images/hero.jpg" alt="Hands holding Bible" style="width:100%;border-radius:10px;margin-bottom:12px;object-fit:cover">
-        <p class="meta">Quick links</p>
-        <p><a href="/billy-graham/" class="btn" style="display:inline-block">Billy Graham</a></p>
-      </aside>
     </section>
 
     <section id="learn" class="content">
@@ -76,20 +120,19 @@
         </article>
       </div>
 
-      <div class="hero-card" style="margin-top:18px">
+      <div class="daily-verse-card">
         <h3 class="center">Featured Scripture</h3>
-        <p class="center verse">"The Lord is my shepherd; I shall not want." — Psalm 23:1</p>
-        <p class="meta center">Short reflection: God cares for us personally and leads us into life.</p>
+        <p id="daily-verse" class="center-verse"></p>
+        <p id="daily-reflection" class="meta center"></p>
       </div>
     </section>
 
     <footer class="footer">
-      <p>Everlight — spreading the gospel with compassion. © <span id="year"></span></p>
+      <p>© <span id="year"></span> The Gospel — a website made by Gabriel Longshaw to spread the good news.</p>
       <p class="meta">Built to be simple and shareable.</p>
     </footer>
   </main>
 
   <script src="assets/js/app.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
