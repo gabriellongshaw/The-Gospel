@@ -246,6 +246,21 @@ body.dark .theme-toggle .moon {
   background: #005fa3;
 }
 
+.resource-btn {
+      display: inline-block;
+      padding: 0.8rem 1.4rem;
+      border-radius: 30px;
+      font-weight: 600;
+      text-align: center;
+      margin: 0.5rem;
+      background: linear-gradient(135deg, var(--accent), var(--link));
+      color: #fff;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    .resource-btn:hover {
+      opacity: 0.7;
+    }
+
 .content {
   background: var(--bg);
   max-width: 1200px;
@@ -268,6 +283,31 @@ body.dark .theme-toggle .moon {
 
 .card h3 {
   margin-bottom: 0.6rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.video-grid iframe {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .video-grid iframe {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .video-grid iframe {
+    height: 220px;
+  }
 }
 
 .footer {

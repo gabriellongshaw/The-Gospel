@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Gospel — Coming Soon</title>
+  <title>Resources — The Gospel</title>
   <script>
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.classList.add('dark');
@@ -14,20 +14,18 @@
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a href="#" class="brand">
+      <a href="../index.html" class="brand">
         <img src="../assets/images/logo.png" alt="Logo">
         <h1>The Gospel</h1>
       </a>
-
       <nav class="nav" aria-label="Main navigation">
         <a href="../index.html">Home</a>
-        <a href="index.html">Resources</a>
+        <a href="index.html" class="active">Resources</a>
         <a href="../charlie-kirk/">Charlie Kirk</a>
         <a href="../billy-graham/">Billy Graham</a>
         <a href="../cliff-and-stuart-knetchle/">Stuart Knechtle</a>
-        <a href="index.html">More</a>
+        <a href="../more/">More</a>
       </nav>
-
       <div class="controls">
         <button class="theme-toggle desktop-theme-toggle" aria-label="Toggle theme">
           <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -47,15 +45,11 @@
             <path fill="var(--icon)" d="M21 12.8A9 9 0 1111.2 3a7 7 0 109.8 9.8z"/>
           </svg>
         </button>
-
         <button class="burger" aria-label="Open menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
-
     <div class="mobile-menu" aria-hidden="true">
       <button class="close-btn" aria-label="Close menu">&times;</button>
       <ul>
@@ -64,9 +58,8 @@
         <li><a href="../charlie-kirk/">Charlie Kirk</a></li>
         <li><a href="../billy-graham/">Billy Graham</a></li>
         <li><a href="../cliff-and-stuart-knetchle/">Stuart Knechtle</a></li>
-        <li><a href="index.">More</a></li>
+        <li><a href="../more/">More</a></li>
       </ul>
-
       <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme">
         <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="5" fill="var(--icon)" stroke="var(--icon)" stroke-width="2"/>
@@ -90,23 +83,58 @@
 
   <main class="container">
     <section class="hero">
-      <div class="hero-card" style="text-align:center; max-width:600px; margin:4rem auto;">
-        <h2>Coming Soon</h2>
-        <p class="lead">Resources and more content will be available shortly. Stay tuned!</p>
+      <div class="hero-card">
+        <h2>Resources to Grow Your Faith</h2>
+        <p class="lead">Explore videos, Bible verses, and tools to help you walk with Jesus every day.</p>
       </div>
     </section>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> The Gospel — a website made by Gabriel Longshaw to spread the good news.</p>
-      <p class="meta">Built to be simple and shareable.</p>
-    </footer>
+    <section class="content">
+      <h3>Pinned Videos</h3>
+      <div class="video-scroll">
+        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID1"></iframe></article>
+        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID2"></iframe></article>
+        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID3"></iframe></article>
+        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID4"></iframe></article>
+        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID5"></iframe></article>
+      </div>
+    </section>
+
+    <section class="content">
+      <h3>More Videos</h3>
+      <div class="video-scroll">
+        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID6"></iframe></article>
+        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID7"></iframe></article>
+        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID8"></iframe></article>
+        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID9"></iframe></article>
+        <article class="card"><iframe src="https://www.youtube.com/embed/VIDEO_ID10"></iframe></article>
+      </div>
+    </section>
+
+    <section class="content">
+      <h3>Bible for How You’re Feeling</h3>
+      <div class="card-grid">
+        <article class="card"><h4>Anxious</h4><p>Philippians 4:6-7</p></article>
+        <article class="card"><h4>Lonely</h4><p>Psalm 23</p></article>
+        <article class="card"><h4>Fearful</h4><p>Isaiah 41:10</p></article>
+        <article class="card"><h4>Joyful</h4><p>Psalm 100</p></article>
+      </div>
+    </section>
+
+    <section class="content">
+      <h3>Download a Bible App</h3>
+      <div>
+        <a class="resource-btn" href="https://www.youversion.com/the-bible-app/">📖 YouVersion Bible App</a>
+        <a class="resource-btn" href="https://www.blueletterbible.org/">📘 Blue Letter Bible</a>
+        <a class="resource-btn" href="https://www.logos.com/">📚 Logos Bible Study</a>
+      </div>
+    </section>
   </main>
 
+  <footer class="footer">
+    <p>© <span id="year"></span> The Gospel — a website made by Gabriel Longshaw to spread the good news.</p>
+    <p class="meta">Built to be simple and shareable.</p>
+  </footer>
   <script src="../assets/js/main.js"></script>
-  <script>
-    // Footer year
-    const yearSpan = document.getElementById('year');
-    if(yearSpan) yearSpan.textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
