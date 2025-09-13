@@ -30,7 +30,7 @@ img {
 
 :root {
   --bg: #ffffff;
-  --header-bg: rgba(255, 255, 255, 0.9);
+  --header-bg: rgba(255, 255, 255, 1);
   --text: #111111;
   --link: #0056b3;
   --card-bg: #fafafa;
@@ -43,7 +43,7 @@ img {
 
 body.dark {
   --bg: #121212;
-  --header-bg: rgba(10, 10, 10, 0.7);
+  --header-bg: rgba(10, 10, 10, 1);
   --card-bg: #1e1e1e;
   --text: #eaeaea;
   --link: #4da3ff;
@@ -56,7 +56,6 @@ body.dark {
 
 .header {
   background: var(--header-bg);
-  backdrop-filter: blur(15px);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
@@ -349,13 +348,13 @@ body.dark .theme-toggle .moon {
 }
 
 .daily-verse-card {
-  background: var(--card-bg);
+  background: var(--bg);
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid var(--border);
   box-shadow: none;
   text-align: center;
-  margin-top: 2rem; /* The issue is here. It pushes the card down from its parent container. */
+  margin-top: 2rem;
 }
 
 
