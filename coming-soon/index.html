@@ -3,29 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>The Gospel</title>
+  <title>The Gospel — Coming Soon</title>
   <script>
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.classList.add('dark');
     }
   </script>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
   <header class="header">
     <div class="container header-inner">
       <a href="#" class="brand">
-        <img src="assets/images/logo.png" alt="Logo">
+        <img src="../assets/images/logo.png" alt="Logo">
         <h1>The Gospel</h1>
       </a>
 
       <nav class="nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="coming-soon/">Resources</a>
-        <a href="charlie-kirk/">Charlie Kirk</a>
-        <a href="billy-graham/">Billy Graham</a>
-        <a href="cliff-and-stuart-knetchle/">Stuart Knechtle</a>
-        <a href="coming-soon/">More</a>
+        <a href="../index.html">Home</a>
+        <a href="index.html">Resources</a>
+        <a href="../charlie-kirk/">Charlie Kirk</a>
+        <a href="../billy-graham/">Billy Graham</a>
+        <a href="../cliff-and-stuart-knetchle/">Stuart Knechtle</a>
+        <a href="index.html">More</a>
       </nav>
 
       <div class="controls">
@@ -60,11 +60,11 @@
       <button class="close-btn" aria-label="Close menu">&times;</button>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="coming-soon/">Resources</a></li>
+        <li><a href="#">Resources</a></li>
         <li><a href="charlie-kirk/">Charlie Kirk</a></li>
         <li><a href="billy-graham/">Billy Graham</a></li>
-        <li><a href="cliff-and-stuart-knetchle/">Cliffe Knechtle</a></li>
-        <li><a href="coming-soon/">More</a></li>
+        <li><a href="cliff-and-stuart-knetchle/">Stuart Knechtle</a></li>
+        <li><a href="#">More</a></li>
       </ul>
 
       <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme">
@@ -90,39 +90,9 @@
 
   <main class="container">
     <section class="hero">
-      <div class="hero-card">
-        <h2>Share the Good News</h2>
-        <p class="lead">The Gospel exists to share the good news with clarity, compassion, and truth. We present scripture, testimonies, and resources to help people explore faith.</p>
-        <p class="verse">"For God so loved the world..." — John 3:16</p>
-        <p class="meta">Short meditation:</p>
-        <p>Jesus came to reconcile us to God and to show us the way to new life. Consider Romans 6:23 — "For the wages of sin is death, but the gift of God is eternal life."</p>
-        <p><a class="btn" href="#learn">Learn More</a></p>
-      </div>
-    </section>
-
-    <section id="learn" class="content">
-      <div class="card-grid">
-        <article class="card">
-          <h3>Who is Jesus?</h3>
-          <p>Jesus of Nazareth is the central figure of Christianity. He lived, taught, died, and rose again — offering forgiveness and new life to all who trust Him.</p>
-          <p class="verse">"I am the way, the truth, and the life." — John 14:6</p>
-        </article>
-
-        <article class="card">
-          <h3>Scripture</h3>
-          <p>The Bible points us to God’s character, our need for grace, and the hope of redemption. Read passages like Psalm 23 and Romans 8 for comfort and assurance.</p>
-        </article>
-
-        <article class="card">
-          <h3>Get Involved</h3>
-          <p>Join a local church, serve your community, and grow in faith through study and prayer. Use the Resources pages to add videos, testimonies, and images.</p>
-        </article>
-      </div>
-
-      <div class="daily-verse-card">
-        <h3 class="center">Featured Scripture</h3>
-        <p id="daily-verse" class="center-verse"></p>
-        <p id="daily-reflection" class="meta center"></p>
+      <div class="hero-card" style="text-align:center; max-width:600px; margin:4rem auto;">
+        <h2>Coming Soon</h2>
+        <p class="lead">Resources and more content will be available shortly. Stay tuned!</p>
       </div>
     </section>
 
@@ -132,6 +102,11 @@
     </footer>
   </main>
 
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    // Footer year
+    const yearSpan = document.getElementById('year');
+    if(yearSpan) yearSpan.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
