@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Gospel - Cliffe &amp; Stuart Knechtle</title>
+
+  <!-- apply system theme ASAP -->
+  <script>
+  (function(){
+    try {
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var useDark = (stored === 'dark') || (!stored && prefersDark);
+      if (useDark) document.documentElement.classList.add('dark');
+      else document.documentElement.classList.remove('dark');
+      document.addEventListener('DOMContentLoaded', function(){
+        if (useDark) document.body.classList.add('dark');
+        else document.body.classList.remove('dark');
+      });
+    } catch(e){}
+  })();
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">
+        <img src="../assets/images/logo.png" alt="The Gospel logo">
+        <h1>The Gospel</h1>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../resources/">Resources</a>
+        <a href="../charlie-kirk/">Charlie Kirk</a>
+        <a href="../billy-graham/">Billy Graham</a>
+        <a href="../cliff-and-stuart-knetchle/" aria-current="page">Cliffe &amp; Stuart</a>
+        <a href="../more/">More</a>
+      </nav>
+
+      <div class="controls">
+        <button class="theme-toggle desktop-theme-toggle" aria-label="Toggle theme" type="button">
+          <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="5" fill="var(--icon)" stroke="var(--icon)" stroke-width="2"/>
+            <g stroke-linecap="round" stroke-linejoin="round" stroke="var(--icon)">
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </g>
+          </svg>
+          <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="var(--icon)" d="M21 12.8A9 9 0 1111.2 3a7 7 0 109.8 9.8z"/>
+          </svg>
+        </button>
+
+        <button class="burger" aria-label="Open menu" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <button class="close-btn" aria-label="Close menu" type="button">&times;</button>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../resources/">Resources</a></li>
+        <li><a href="../charlie-kirk/">Charlie Kirk</a></li>
+        <li><a href="../billy-graham/">Billy Graham</a></li>
+        <li><a href="../cliff-and-stuart-knetchle/">Cliffe &amp; Stuart</a></li>
+        <li><a href="../more/">More</a></li>
+      </ul>
+      <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme" type="button">
+        <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="5" fill="var(--icon)" stroke="var(--icon)" stroke-width="2"/>
+        </svg>
+        <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="var(--icon)" d="M21 12.8A9 9 0 1111.2 3a7 7 0 109.8 9.8z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="profile-heading">
+      <div class="hero-card" style="display:grid;grid-template-columns:1fr;gap:14px;">
+        <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap;">
+          <img src="../assets/images/cliffe-knechtle.jpeg" alt="Cliffe Knechtle" style="width:160px;height:160px;object-fit:cover;border-radius:10px;margin-right:8px;">
+          <div>
+            <h2 id="profile-heading">Cliffe Knechtle</h2>
+            <p class="meta">Pastor • Evangelist • Christian Apologist</p>
+            <p>Cliffe Knechtle is known for engaging college students and communities with clear, thoughtful presentations of the Christian faith. For decades he has been speaking in open forums, answering challenging questions about faith, morality, and life.</p>
+            <p><a class="btn" href="../resources/">Related resources</a></p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px;">
+          <div class="card" style="padding:12px">
+            <h4>Quick facts</h4>
+            <ul style="list-style:none;padding-left:0;margin:0">
+              <li><strong>Role:</strong> Evangelist & Apologist</li>
+              <li><strong>Focus:</strong> Campus ministry, Public Q&A, Evangelism</li>
+              <li><strong>Location:</strong> USA & International</li>
+            </ul>
+          </div>
+
+          <div class="card" style="padding:12px">
+            <h4>Contact & Links</h4>
+            <p style="margin:0 0 8px 0">Their Church, websites & more</p>
+            <p style="margin:0"><a class="resource-btn" href="https://givemeananswer.org/" target="_blank" rel="noopener">Official Website</a></p>
+            <p style="margin:6px 0 0 0"><a class="resource-btn" href="#" target="_blank" rel="noopener">Sermons &amp; Podcast</a></p>
+            <p style="margin:6px 0 0 0"><a class="resource-btn" href="https://www.gracecommunity.info/" target="_blank" rel="noopener">Church</a></p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-labelledby="stuart-heading" style="padding:20px;">
+        <h3 id="stuart-heading">Stuart Knechtle</h3>
+        <p class="meta">Pastor • Christian counselor • Teacher</p>
+        <p>Stuart Knechtle serves as a pastor and counsellor, focusing on discipleship, pastoral care, marriage and family ministry. He has led Bible studies, marriage seminars, and spoken at conferences in the UK and internationally.</p>
+        <p style="margin-top:8px"><a class="btn" href="../resources/">See resources</a></p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> The Gospel — a website made by Gabriel Longshaw to spread the good news.</p>
+    <p class="meta">Built to be simple and shareable.</p>
+  </footer>
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
