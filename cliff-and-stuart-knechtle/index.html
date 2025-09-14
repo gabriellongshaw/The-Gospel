@@ -101,46 +101,48 @@
   </header>
 
   <main class="container">
-    <section class="hero" aria-labelledby="profile-heading">
-      <div class="hero-card" style="display:grid;grid-template-columns:1fr;gap:14px;">
-        <div style="display:flex;gap:14px;align-items:flex-start;flex-wrap:wrap;">
-          <img src="../assets/images/cliffe-knechtle.jpeg" alt="Cliffe Knechtle" style="width:160px;height:160px;object-fit:cover;border-radius:10px;margin-right:8px;">
-          <div>
-            <h2 id="profile-heading">Cliffe Knechtle</h2>
-            <p class="meta">Pastor • Evangelist • Christian Apologist</p>
-            <p>Cliffe Knechtle is known for engaging college students and communities with clear, thoughtful presentations of the Christian faith. For decades he has been speaking in open forums, answering challenging questions about faith, morality, and life.</p>
-            <p><a class="btn" href="../resources/">Related resources</a></p>
-          </div>
-        </div>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px;">
-          <div class="card" style="padding:12px">
-            <h4>Quick facts</h4>
-            <ul style="list-style:none;padding-left:0;margin:0">
-              <li><strong>Role:</strong> Evangelist & Apologist</li>
-              <li><strong>Focus:</strong> Campus ministry, Public Q&A, Evangelism</li>
-              <li><strong>Location:</strong> USA & International</li>
-            </ul>
-          </div>
-
-          <div class="card" style="padding:12px">
-            <h4>Contact & Links</h4>
-            <p style="margin:0 0 8px 0">Their Church, websites & more</p>
-            <p style="margin:0"><a class="resource-btn" href="https://givemeananswer.org/" target="_blank" rel="noopener">Official Website</a></p>
-            <p style="margin:6px 0 0 0"><a class="resource-btn" href="#" target="_blank" rel="noopener">Sermons &amp; Podcast</a></p>
-            <p style="margin:6px 0 0 0"><a class="resource-btn" href="https://www.gracecommunity.info/" target="_blank" rel="noopener">Church</a></p>
-          </div>
+  <section class="hero" aria-labelledby="profile-heading">
+    <!-- Cliffe Knechtle Card -->
+    <div class="hero-card hero-grid">
+      <div class="hero-top">
+        <img src="../assets/images/cliffe-knechtle.jpeg" alt="Cliffe Knechtle" class="profile-img">
+        <div class="hero-info">
+          <h2 id="profile-heading">Cliffe Knechtle</h2>
+          <p class="meta">Pastor • Evangelist • Christian Apologist</p>
+          <p>Cliffe Knechtle is known for engaging college students and communities with clear, thoughtful presentations of the Christian faith. For decades he has been speaking in open forums, answering challenging questions about faith, morality, and life.</p>
+          <p><a class="btn" href="../resources/">Related resources</a></p>
         </div>
       </div>
-
-      <aside class="hero-card" aria-labelledby="stuart-heading" style="padding:20px;">
-        <h3 id="stuart-heading">Stuart Knechtle</h3>
-        <p class="meta">Pastor • Christian counselor • Teacher</p>
-        <p>Stuart Knechtle serves as a pastor and counsellor, focusing on discipleship, pastoral care, marriage and family ministry. He has led Bible studies, marriage seminars, and spoken at conferences in the UK and internationally.</p>
-        <p style="margin-top:8px"><a class="btn" href="../resources/">See resources</a></p>
-      </aside>
-    </section>
-  </main>
+      
+      <div class="hero-bottom card-grid-2">
+        <div class="card">
+          <h4>Quick facts</h4>
+          <ul class="no-list">
+            <li><strong>Role:</strong> Evangelist & Apologist</li>
+            <li><strong>Focus:</strong> Campus ministry, Public Q&A, Evangelism</li>
+            <li><strong>Location:</strong> USA & International</li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <h4>Contact & Links</h4>
+          <p>Their Church, websites & more</p>
+          <p><a class="resource-btn" href="https://givemeananswer.org/" target="_blank" rel="noopener">Official Website</a></p>
+          <p><a class="resource-btn" href="#" target="_blank" rel="noopener">Sermons &amp; Podcast</a></p>
+          <p><a class="resource-btn" href="https://www.gracecommunity.info/" target="_blank" rel="noopener">Church</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Stuart Knechtle Card -->
+    <aside class="hero-card hero-simple" aria-labelledby="stuart-heading">
+      <h3 id="stuart-heading">Stuart Knechtle</h3>
+      <p class="meta">Pastor • Christian counselor • Teacher</p>
+      <p>Stuart Knechtle serves as a pastor and counsellor, focusing on discipleship, pastoral care, marriage and family ministry. He has led Bible studies, marriage seminars, and spoken at conferences in the UK and internationally.</p>
+      <p><a class="btn" href="../resources/">See resources</a></p>
+    </aside>
+  </section>
+</main>
 
   <footer class="footer">
     <p>© <span id="year"></span> The Gospel — a website made by Gabriel Longshaw to spread the good news.</p>

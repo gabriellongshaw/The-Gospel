@@ -1,3 +1,4 @@
+/* Base styles */
 *,
 *::before,
 *::after {
@@ -7,7 +8,11 @@
 }
 
 html, body {
+  width: 100%; 
   height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -466,12 +471,6 @@ body.dark .theme-toggle .moon {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  html, body {
-  width: 100%; height: 100%;
-  margin: 0; padding: 0;
-  overflow-x: hidden;
-  }
-
   .hero-top {
     flex-direction: column;
     align-items: center;
@@ -491,12 +490,6 @@ body.dark .theme-toggle .moon {
 }
 
 @media (max-width: 1024px) {
-  html, body {
-  width: 100%; height: 100%;
-  margin: 0; padding: 0;
-  overflow-x: hidden;
-  }
-  
   .hero {
     grid-template-columns: 1fr;
     padding: 1rem 2rem;
@@ -527,12 +520,6 @@ body.dark .theme-toggle .moon {
 }
 
 @media (max-width: 768px) {
-  html, body {
-  width: 100%; height: 100%;
-  margin: 0; padding: 0;
-  overflow-x: hidden;
-  }
-  
   .nav {
     display: none;
   }
@@ -573,13 +560,6 @@ body.dark .theme-toggle .moon {
 }
 
 @media (max-width: 900px) and (orientation: landscape) {
-  
-  html, body {
-  width: 100%; height: 100%;
-  margin: 0; padding: 0;
-  overflow-x: hidden;
-  }
-  
   .nav {
     display: none !important;
   }
@@ -636,12 +616,6 @@ body.dark .theme-toggle .moon {
 }
 
 @media (min-width: 1600px) {
-  html, body {
-  width: 100%; height: 100%;
-  margin: 0; padding: 0;
-  overflow-x: hidden;
-  }
-  
   .hero {
     max-width: 1800px;
     gap: 3rem;
@@ -672,12 +646,6 @@ body.dark .theme-toggle .moon {
 }
 
 @media (min-width: 2000px) {
-  html, body {
-  width: 100%; height: 100%;
-  margin: 0; padding: 0;
-  overflow-x: hidden;
-  }
-  
   .hero {
     max-width: 2200px;
     gap: 4rem;
@@ -692,22 +660,4 @@ body.dark .theme-toggle .moon {
     padding: 3rem;
     font-size: 1.1rem;
   }
-}
-
-.hero-card,
-.daily-verse-card,
-.card,
-.hero-simple,
-.video-card {
-  background: var(--card-bg);
-  color: var(--text);
-}
-
-body.dark .hero-card,
-body.dark .daily-verse-card,
-body.dark .card,
-body.dark .hero-simple,
-body.dark .video-card {
-    background-color: var(--card-bg);
-    color: var(--text);
 }
