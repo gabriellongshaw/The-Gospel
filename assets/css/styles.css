@@ -678,12 +678,27 @@ body.dark .theme-toggle .moon {
     padding: 0.7rem 1.2rem;
     font-size: 0.8rem;
   }
-  .daily-verse-card h3 {
-    font-size: 0.7rem;
-  }
+  
   .daily-verse-card p {
     font-size: 0.5rem;
   }
+   .daily-verse-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .daily-verse-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .center-verse {
+    font-size: 1rem;
+  }
+
+  #daily-reflection {
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+  }
+
   .hero-card .meta {
     font-size: 0.8rem;
   }
@@ -733,6 +748,23 @@ body.dark .theme-toggle .moon {
   }
   .hero-card .meta {
     font-size: 0.9rem;
+  }
+  .daily-verse-card {
+    padding: 1.8rem 1.25rem;
+    max-width: 90%;
+  }
+
+  .daily-verse-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .center-verse {
+    font-size: 1.1rem;
+  }
+
+  #daily-reflection {
+    padding: 0.95rem 1.1rem;
+    font-size: 1rem;
   }
 }
 
