@@ -14,7 +14,7 @@ html, body {
   line-height: 1.6;
   background: var(--bg);
   color: var(--text);
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.2s, color 0.2s;
 }
 
 a {
@@ -134,7 +134,7 @@ body.dark {
   height: 28px;
   fill: var(--icon);
   stroke: var(--icon);
-  transition: transform 0.6s ease, opacity 0.6s ease;
+  transition: transform 0.5s ease, opacity 0.2s ease;
 }
 
 .theme-toggle .sun {
@@ -145,13 +145,13 @@ body.dark {
 
 .theme-toggle .moon {
   opacity: 0;
-  transform: rotate(-10deg);
+  transform: rotate(-50deg); 
   z-index: 1;
 }
 
 body.dark .theme-toggle .sun {
   opacity: 0;
-  transform: rotate(15deg);
+  transform: rotate(180deg); 
 }
 
 body.dark .theme-toggle .moon {
@@ -309,7 +309,6 @@ body.dark .theme-toggle .moon {
   border: none;
 }
 
-/* On larger screens, wrap into grid */
 @media (min-width: 900px) {
   .video-row {
     flex-wrap: wrap;
@@ -349,7 +348,7 @@ body.dark .theme-toggle .moon {
   justify-content: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s;
+  transition: opacity 0.2s;
 }
 
 .mobile-menu.active {
@@ -410,87 +409,80 @@ body.dark .theme-toggle .moon {
 }
 
 .daily-verse-card {
-  background: var(--card-bg); /* change from var(--bg) to match hero cards */
+  background: var(--card-bg); 
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid var(--border);
   text-align: center;
-  margin: 2rem auto; /* center horizontally */
-  max-width: 600px; /* limit width */
-  box-shadow: 0 4px 12px var(--hero-accent); /* optional for visual consistency */
+  margin: 2rem auto; 
+  max-width: 600px; 
+  box-shadow: 0 4px 12px var(--hero-accent); 
 }
 
-
-/* ---------------------------
-   Responsive Media Queries
---------------------------- */
-
-/* Tablets & smaller laptops */
 @media (max-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;
     padding: 1rem 2rem;
     gap: 1.5rem;
   }
-  
+
   .header-inner {
     padding: 1rem 2rem;
   }
-  
+
   .hero-card {
     padding: 1.5rem;
     max-width: 100%;
     margin: 0;
   }
-  
+
   .hero-card h3 {
     font-size: 1.4rem;
   }
-  
+
   .hero-card .verse {
     font-size: 1.1rem;
   }
-  
+
   .hero-card .meta {
     font-size: 0.9rem;
   }
 }
 
-/* Mobile portrait */
 @media (max-width: 768px) {
   .nav {
     display: none;
   }
-  
+
   .burger {
     display: flex;
   }
-  
+
   .desktop-theme-toggle {
     display: none;
   }
-  
+
   .hero {
     padding: 1rem;
   }
-  
+
   .hero-card {
     width: 100%;
     padding: 1rem;
   }
-  
+
   .hero-card h3 {
     font-size: 1.2rem;
   }
-  
+
   .hero-card .verse {
     font-size: 1rem;
   }
-  
+
   .hero-card .meta {
     font-size: 0.85rem;
   }
-  
+
   .footer {
     padding: 1rem;
     font-size: 0.85rem;
@@ -503,7 +495,6 @@ body.dark .theme-toggle .moon {
   }
 }
 
-/* Mobile landscape / small tablets */
 @media (max-width: 900px) and (orientation: landscape) {
   .nav {
     display: none !important;
@@ -516,18 +507,18 @@ body.dark .theme-toggle .moon {
   .desktop-theme-toggle {
     display: none !important;
   }
-  
+
   .hero {
     grid-template-columns: 1fr;
     padding: 0.8rem 1rem;
     gap: 1rem;
   }
-  
+
   .hero-card {
     padding: 0.8rem;
     max-width: 100%;
   }
-  
+
   .hero-card h2 {
     font-size: 1rem;
   }
@@ -550,7 +541,7 @@ body.dark .theme-toggle .moon {
   .hero-card .meta {
     font-size: 0.8rem;
   }
-  
+
   .footer {
     padding: 0.8rem;
     font-size: 0.8rem;
@@ -566,31 +557,30 @@ body.dark .theme-toggle .moon {
   }
 }
 
-/* Large desktops / wide monitors */
 @media (min-width: 1600px) {
   .hero {
     max-width: 1800px;
     gap: 3rem;
     justify-content: center;
   }
-  
+
   .header-inner {
     max-width: 1600px;
   }
-  
+
   .hero-card {
     padding: 3rem;
   }
-  
+
   .brand h1 {
     font-size: 1.8rem;
   }
-  
+
   .nav a {
     font-size: 1.1rem;
     padding: 8px 12px;
   }
-  
+
   .footer {
     padding: 2.5rem;
     font-size: 1rem;
@@ -603,18 +593,17 @@ body.dark .theme-toggle .moon {
   }
 }
 
-/* Extra-wide screens (ultra-wide monitors) */
 @media (min-width: 2000px) {
   .hero {
     max-width: 2200px;
     gap: 4rem;
     justify-content: center;
   }
-  
+
   .hero-card {
     padding: 4rem;
   }
-  
+
   .footer {
     padding: 3rem;
     font-size: 1.1rem;

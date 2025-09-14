@@ -15,51 +15,14 @@ applySystemTheme(prefersDark);
 
 prefersDark.addEventListener('change', applySystemTheme);
 
-function toggleTheme(toggle) {
-  const sun = toggle.querySelector('.sun');
-  const moon = toggle.querySelector('.moon');
-  const isDark = body.classList.contains('dark');
-  
-  toggle.classList.add('animate');
-  
-  if (!isDark) {
-    sun.style.transform = 'rotate(15deg)';
-    sun.style.opacity = '0';
-    moon.style.transform = 'rotate(0deg)';
-    moon.style.opacity = '1';
-    body.classList.add('dark');
-  } else {
-    moon.style.transform = 'rotate(-10deg)';
-    moon.style.opacity = '0';
-    sun.style.transform = 'rotate(5deg)';
-    sun.style.opacity = '1';
-    body.classList.remove('dark');
-  }
-  
-  setTimeout(() => toggle.classList.remove('animate'), 600);
-  
-  toggles.forEach(other => {
-    if (other !== toggle) {
-      const s = other.querySelector('.sun');
-      const m = other.querySelector('.moon');
-      if (!isDark) {
-        s.style.opacity = '0';
-        s.style.transform = 'rotate(15deg)';
-        m.style.opacity = '1';
-        m.style.transform = 'rotate(0deg)';
-      } else {
-        m.style.opacity = '0';
-        m.style.transform = 'rotate(-10deg)';
-        s.style.opacity = '1';
-        s.style.transform = 'rotate(5deg)';
-      }
-    }
-  });
+function toggleTheme() {
+  body.classList.toggle('dark');
 }
 
 toggles.forEach(toggle => {
-  toggle.addEventListener('click', () => toggleTheme(toggle));
+  toggle.addEventListener('click', toggleTheme);
 });
+
 
 const burger = document.querySelector('.burger');
 const mobileMenu = document.querySelector('.mobile-menu');
@@ -71,7 +34,7 @@ burger.addEventListener('click', () => {
   
   const items = mobileMenu.querySelectorAll('li');
   items.forEach((item, index) => {
-    item.style.animation = `slideUp 0.4s forwards`;
+    item.style.animation = `slideUp 0.2s forwards`;
     item.style.animationDelay = `${0.1 + index * 0.1}s`;
   });
 });

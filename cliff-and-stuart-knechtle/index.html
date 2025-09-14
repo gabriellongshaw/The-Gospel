@@ -24,22 +24,6 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <script>
-  (function(){
-    try {
-      var stored = localStorage.getItem('theme');
-      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-      var useDark = (stored === 'dark') || (!stored && prefersDark);
-      if (useDark) document.documentElement.classList.add('dark');
-      else document.documentElement.classList.remove('dark');
-      document.addEventListener('DOMContentLoaded', function(){
-        if (useDark) document.body.classList.add('dark');
-        else document.body.classList.remove('dark');
-      });
-    } catch(e){}
-  })();
-  </script>
-
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 <body>
@@ -95,14 +79,24 @@
         <li><a href="index.html">Cliffe &amp; Stuart Knechtle</a></li>
         <li><a href="../more/">More</a></li>
       </ul>
-      <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme" type="button">
-        <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-          <circle cx="12" cy="12" r="5" fill="var(--icon)" stroke="var(--icon)" stroke-width="2"/>
-        </svg>
-        <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="var(--icon)" d="M21 12.8A9 9 0 1111.2 3a7 7 0 109.8 9.8z"/>
-        </svg>
-      </button>
+    <button class="theme-toggle mobile-theme-toggle" aria-label="Toggle theme">
+      <svg class="icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5" fill="var(--icon)" stroke="var(--icon)" stroke-width="2" />
+        <g stroke-linecap="round" stroke-linejoin="round" stroke="var(--icon)">
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </g>
+      </svg>
+      <svg class="icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path fill="var(--icon)" d="M21 12.8A9 9 0 1111.2 3a7 7 0 109.8 9.8z" />
+      </svg>
+    </button>
     </div>
   </header>
 
