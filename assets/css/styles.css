@@ -651,7 +651,10 @@ body.dark .theme-toggle .moon {
 }
 
 @media (max-width: 900px) and (orientation: landscape) {
-
+  .nav {
+    display: none;
+  }
+  
   .hero {
     grid-template-columns: 1fr;
     padding: 0.8rem 1rem;
