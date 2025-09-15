@@ -598,10 +598,6 @@ body.dark .theme-toggle .moon {
   font-style: italic;
 }
 
----
-
-### Mobile and Tablet Styles (max-width: 768px)
-
 @media (max-width: 768px) {
   .hero-top {
     flex-direction: column;
@@ -667,10 +663,6 @@ body.dark .theme-toggle .moon {
   }
 }
 
----
-
-### iPhone 13 Landscape and similar devices (769px to 899px)
-
 @media (min-width: 769px) and (max-width: 899px) {
   .header-inner, .content {
     padding: 1rem 1.5rem;
@@ -721,10 +713,6 @@ body.dark .theme-toggle .moon {
   }
 }
 
----
-
-### Desktop Styles (min-width: 900px)
-
 @media (min-width: 900px) {
   .nav {
     display: flex;
@@ -744,10 +732,6 @@ body.dark .theme-toggle .moon {
     margin: 0 auto;
   }
 }
-
----
-
-### Large Desktop Styles (min-width: 1024px)
 
 @media (min-width: 1024px) {
   .video-grid iframe {
@@ -787,10 +771,6 @@ body.dark .theme-toggle .moon {
   }
 }
 
----
-
-### Extra-Large Screen Styles (min-width: 1600px)
-
 @media (min-width: 1600px) {
   .hero {
     max-width: 1800px;
@@ -815,10 +795,6 @@ body.dark .theme-toggle .moon {
     font-size: 1rem;
   }
 }
-
----
-
-### Ultra-Wide Screen Styles (min-width: 2000px)
 
 @media (min-width: 2000px) {
   .hero {
