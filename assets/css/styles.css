@@ -37,6 +37,7 @@ img {
   --header-bg: rgba(255, 255, 255, 1);
   --menu-bg: rgba(255, 255, 255, 1); 
   --card-bg: #fafafa;
+  --nav-hover: #e9ecef;
   --text: #111111;
   --link: #0056b3;
   --border: #d0d0d0;
@@ -51,6 +52,7 @@ body.dark {
   --header-bg: rgba(20, 20, 20, 1);
   --menu-bg: rgba(0, 0, 0, 0.9);
   --card-bg: #1e1e1e;
+  --nav-hover: #15222b;
   --text: #eaeaea;
   --link: #4da3ff;
   --border: #333;
@@ -123,8 +125,7 @@ body.dark {
 }
 
 .nav a:hover {
-  color: var(--link);
-  background: var(--hover-bg);
+  background: var(--nav-hover);
 }
 
 .controls {
@@ -382,15 +383,12 @@ body.dark .theme-toggle .moon {
 }
 
 .mobile-menu li {
-
   opacity: 0;
   transform: translateY(20px);
-
   transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
 .mobile-menu.active li {
-
   opacity: 1;
   transform: translateY(0);
 }
@@ -587,7 +585,6 @@ body.dark .theme-toggle .moon {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text);
-
   overflow: hidden;
   height: 0;
   transition: height 0.25s ease-out, padding 0.25s ease-out;
@@ -601,7 +598,11 @@ body.dark .theme-toggle .moon {
   font-style: italic;
 }
 
-@media (max-width: 900px) {
+---
+
+### Mobile and Tablet Styles (max-width: 768px)
+
+@media (max-width: 768px) {
   .hero-top {
     flex-direction: column;
     align-items: center;
@@ -630,10 +631,6 @@ body.dark .theme-toggle .moon {
   .hero-card {
     width: 100%;
     padding: 1rem;
-  }
-  .footer {
-    padding: 1rem;
-    font-size: 0.85rem;
   }
   .hero-card h3 {
     font-size: 1.2rem;
@@ -664,9 +661,71 @@ body.dark .theme-toggle .moon {
   .story-content {
     font-size: 0.9rem;
   }
+  .footer {
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
 }
 
-@media (min-width: 901px) {
+---
+
+### iPhone 13 Landscape and similar devices (769px to 899px)
+
+@media (min-width: 769px) and (max-width: 899px) {
+  .header-inner, .content {
+    padding: 1rem 1.5rem;
+  }
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
+  .desktop-theme-toggle {
+    display: none;
+  }
+  .hero-card {
+    padding: 1.5rem;
+    max-width: 750px;
+  }
+  .hero-card h3 {
+    font-size: 1.3rem;
+  }
+  .hero-card .verse {
+    font-size: 1.1rem;
+  }
+  .hero-card .meta {
+    font-size: 0.9rem;
+  }
+  .story-summary {
+    font-size: 1rem;
+    padding: 1rem 1.2rem;
+  }
+  .story-content {
+    font-size: 1rem;
+  }
+  .daily-verse-card {
+    padding: 1.2rem;
+  }
+  .daily-verse-card h3 {
+    font-size: 1.2rem;
+  }
+  .center-verse {
+    font-size: 1rem;
+  }
+  #daily-reflection {
+    font-size: 0.95rem;
+  }
+  .footer {
+    font-size: 0.85rem;
+  }
+}
+
+---
+
+### Desktop Styles (min-width: 900px)
+
+@media (min-width: 900px) {
   .nav {
     display: flex;
   }
@@ -678,12 +737,17 @@ body.dark .theme-toggle .moon {
   }
   .hero {
     grid-template-columns: 1fr 1fr;
+    padding: 2rem 1rem;
   }
   .hero-card {
     max-width: none;
-    margin: 0;
+    margin: 0 auto;
   }
 }
+
+---
+
+### Large Desktop Styles (min-width: 1024px)
 
 @media (min-width: 1024px) {
   .video-grid iframe {
@@ -723,6 +787,10 @@ body.dark .theme-toggle .moon {
   }
 }
 
+---
+
+### Extra-Large Screen Styles (min-width: 1600px)
+
 @media (min-width: 1600px) {
   .hero {
     max-width: 1800px;
@@ -747,6 +815,10 @@ body.dark .theme-toggle .moon {
     font-size: 1rem;
   }
 }
+
+---
+
+### Ultra-Wide Screen Styles (min-width: 2000px)
 
 @media (min-width: 2000px) {
   .hero {
