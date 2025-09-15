@@ -727,10 +727,6 @@ body.dark .theme-toggle .moon {
     grid-template-columns: 1fr 1fr;
     padding: 2rem 1rem;
   }
-  .hero-card {
-    max-width: none;
-    margin: 0 auto;
-  }
 }
 
 @media (min-width: 1024px) {
