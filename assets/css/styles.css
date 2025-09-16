@@ -38,6 +38,8 @@ img {
   --menu-bg: rgba(255, 255, 255, 1); 
   --card-bg: #fafafa;
   --nav-hover: #e9ecef;
+  --button: #BCF3FD;
+  --button-text: #000;
   --text: #111111;
   --link: #0056b3;
   --border: #d0d0d0;
@@ -197,9 +199,9 @@ body.dark .theme-toggle .moon {
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -213,6 +215,7 @@ body.dark .theme-toggle .moon {
   position: relative;
   box-shadow: 0 4px 12px var(--hero-accent);
   max-width: 900px;
+  margin: 0 auto;
 }
 
 .hero-card h3 {
@@ -253,16 +256,16 @@ body.dark .theme-toggle .moon {
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
-  border-radius: 6px;
-  background: var(--link);
-  color: #fff;
+  border-radius: 50px;
+  background: var(--button);
+  color: var(--button-text);
   font-weight: 500;
   transition: background 0.2s;
   margin-top: 1rem;
 }
 
 .btn:hover {
-  background: #005fa3;
+  opacity: 0.9;
 }
 
 .resource-btn {
@@ -723,9 +726,7 @@ body.dark .theme-toggle .moon {
     display: block;
   }
   .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
     padding: 2rem 1rem;
   }
 }
