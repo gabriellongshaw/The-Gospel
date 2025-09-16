@@ -255,7 +255,7 @@ body.dark .theme-toggle .moon {
 
 .btn {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.7rem 1.7rem;
   border-radius: 50px;
   background: var(--button);
   color: var(--button-text);
