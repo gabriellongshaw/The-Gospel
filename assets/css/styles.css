@@ -38,13 +38,13 @@ img {
   --menu-bg: rgba(255, 255, 255, 1); 
   --card-bg: #fafafa;
   --nav-hover: #e9ecef;
-  --button: #000;
+  --button: #87CEEB;
   --button-text: #fff;
   --text: #111111;
   --link: #0056b3;
   --border: #d0d0d0;
   --icon: #222222;
-  --accent: rgba(13,110,253,1);
+  --accent: #87CEEB;
   --hero-accent: rgba(0,0,0,0.08);
   --hover-bg: #e9ecef;
 }
@@ -55,13 +55,13 @@ body.dark {
   --menu-bg: rgba(0, 0, 0, 0.9);
   --card-bg: #1e1e1e;
   --nav-hover: #15222b;
-  --button: #fff;
+  --button: #87CEEB;
   --button-text: #000;
   --text: #eaeaea;
   --link: #4da3ff;
   --border: #333;
   --icon: #eaeaea;
-  --accent: rgba(124,231,217,1);
+  --accent: #87CEEB;
   --hero-accent: rgba(0,0,0,0.3);
   --hover-bg: #15222b;
 }
