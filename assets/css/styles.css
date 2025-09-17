@@ -210,6 +210,10 @@ body.dark .theme-toggle .moon {
   padding: 2rem 1rem;
 }
 
+.hero.hero-centered {
+  place-items: center;
+}
+
 .hero-card {
   background: var(--card-bg);
   border-radius: 12px;
@@ -218,7 +222,6 @@ body.dark .theme-toggle .moon {
   box-shadow: 0 4px 12px var(--hero-accent);
   max-width: 900px;
   margin: 0 auto;
-  grid-column: 1 / -1;
 }
 
 .hero-card h3 {
@@ -272,19 +275,19 @@ body.dark .theme-toggle .moon {
 }
 
 .resource-btn {
-      display: inline-block;
-      padding: 0.8rem 1.4rem;
-      border-radius: 30px;
-      font-weight: 600;
-      text-align: center;
-      margin: 0.5rem;
-      background: linear-gradient(135deg, var(--accent), var(--link));
-      color: #fff;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-    .resource-btn:hover {
-      opacity: 0.7;
-    }
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0.5rem;
+  background: linear-gradient(135deg, var(--accent), var(--link));
+  color: #fff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.resource-btn:hover {
+  opacity: 0.7;
+}
 
 .content {
   background: var(--bg);
@@ -332,27 +335,6 @@ body.dark .theme-toggle .moon {
   height: 200px;
   border-radius: 6px;
   border: none;
-}
-
-@media (min-width: 900px) {
-  .video-row {
-    flex-wrap: wrap;
-    overflow-x: visible;
-    justify-content: center;
-  }
-  .video-card {
-    flex: 1 1 calc(20% - 1rem);
-    max-width: 300px;
-  }
-  .video-card iframe {
-    height: 180px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .video-grid iframe {
-    height: 220px;
-  }
 }
 
 .footer {
@@ -731,6 +713,21 @@ body.dark .theme-toggle .moon {
   .hero {
     grid-template-columns: 1fr 1fr;
     padding: 2rem 1rem;
+  }
+  .hero.hero-centered {
+    grid-template-columns: 1fr;
+  }
+  .video-row {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    justify-content: center;
+  }
+  .video-card {
+    flex: 1 1 calc(20% - 1rem);
+    max-width: 300px;
+  }
+  .video-card iframe {
+    height: 180px;
   }
 }
 
