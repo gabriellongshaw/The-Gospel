@@ -4,6 +4,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 html, body {
@@ -556,6 +561,7 @@ body.dark .theme-toggle .moon {
   right: 20px;
   top: 50%;
   transform: translateY(-50%) rotate(0deg);
+  transform-origin: center center;
   font-size: 1.5rem;
   font-weight: 300;
   transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
