@@ -4,11 +4,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
 }
 
 html, body {
@@ -553,18 +548,26 @@ body.dark .theme-toggle .moon {
   position: relative;
   color: var(--text);
   transition: color 0.2s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.story-summary::before {
-  content: "+";
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%) rotate(0deg);
-  transform-origin: center center;
-  font-size: 1.5rem;
-  font-weight: 300;
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s ease;
+.story-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, color 0.2s ease;
+  color: var(--text);
+}
+
+.story-dropdown[open] .story-summary {
+  color: var(--accent);
+}
+
+.story-dropdown[open] .story-summary .story-icon {
+  transform: rotate(45deg);
+  color: var(--accent);
 }
 
 .story-dropdown[open] .story-summary {
