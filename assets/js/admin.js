@@ -3,7 +3,6 @@ import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/fireb
 import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js";
 import { verses } from "./verses.js";
 
-// ===== FIREBASE CONFIG =====
 const firebaseConfig = {
   apiKey: "AIzaSyB8FbZL7Ll8BqJHMvTab-PFu8Muudh9JuA",
   authDomain: "the-gospel-daily-verses.firebaseapp.com",
@@ -18,7 +17,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-// ===== DOM ELEMENTS =====
 const loginSection = document.getElementById('login-section');
 const adminSection = document.getElementById('admin-section');
 const loginForm = document.getElementById('login-form');
@@ -33,10 +31,8 @@ const versesList = document.getElementById('verses-list');
 const currentVerseText = document.getElementById('current-verse-text');
 const currentVerseReflection = document.getElementById('current-verse-reflection');
 
-// ===== HELPER =====
 function formatDate(date) { return date.toISOString().split('T')[0]; }
 
-// ===== SHOW LOGIN SCREEN =====
 function showLogin() {
   loginSection.style.display = 'flex';
   adminSection.style.display = 'none';
@@ -47,7 +43,6 @@ function showLogin() {
   loginError.textContent = '';
 }
 
-// ===== SHOW ADMIN SCREEN =====
 function showAdmin() {
   loginSection.style.display = 'none';
   adminSection.style.display = 'flex';
@@ -57,7 +52,6 @@ function showAdmin() {
   renderVerses();
 }
 
-// ===== LOGIN FORM SUBMISSION =====
 loginForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   loginError.textContent = '';
@@ -69,24 +63,20 @@ loginForm.addEventListener('submit', async (e) => {
   }
 });
 
-// ===== LOGOUT =====
 logoutBtn.addEventListener('click', async () => {
   await signOut(auth);
   showLogin();
 });
 
-// ===== HOME BUTTONS =====
-homeBtn.addEventListener('click', () => window.location.href = "/");
-homeBtnAdmin.addEventListener('click', () => window.location.href = "/");
+homeBtn.addEventListener('click', () => window.location.href = "../index.html");
+homeBtnAdmin.addEventListener('click', () => window.location.href = "../index.html");
 
-// ===== AUTOMATIC VERSE BUTTON =====
 autoBtn.addEventListener('click', async () => {
   const today = formatDate(new Date());
   await setDoc(doc(db, "overrides", today), { index: null });
   loadTodayVerse();
 });
 
-// ===== RENDER VERSES =====
 function renderVerses() {
   versesList.innerHTML = '';
   verses.forEach((v, i) => {
@@ -102,25 +92,22 @@ function renderVerses() {
   });
 }
 
-// ===== SET DAILY OVERRIDE =====
 async function setDailyOverride(index) {
   const today = formatDate(new Date());
   await setDoc(doc(db, "overrides", today), { index });
   loadTodayVerse();
 }
 
-// ===== LOAD TODAY'S VERSE =====
 async function loadTodayVerse() {
   const today = formatDate(new Date());
   const overrideSnap = await getDoc(doc(db, "overrides", today));
   let verseIndex = overrideSnap.exists() ? overrideSnap.data().index : null;
-  if (verseIndex === null) verseIndex = new Date().getDate() % verses.length; // automatic
+  if (verseIndex === null) verseIndex = new Date().getDate() % verses.length;
   const verse = verses[verseIndex];
   currentVerseText.textContent = verse.text;
   currentVerseReflection.textContent = verse.reflection;
 }
 
-// ===== INITIALIZE SCREEN =====
 auth.onAuthStateChanged(user => {
   if (user) {
     showAdmin();
