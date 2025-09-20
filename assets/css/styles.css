@@ -211,6 +211,8 @@ body.dark .theme-toggle .moon {
 }
 
 .hero.hero-centered {
+  grid-template-columns: 1fr;
+  justify-items: center;
   place-items: center;
 }
 
