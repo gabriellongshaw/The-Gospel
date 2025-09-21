@@ -42,7 +42,7 @@ img {
   --header-bg: rgba(255, 255, 255, 1);
   --menu-bg: rgba(255, 255, 255, 1); 
   --card-bg: #fafafa;
-  --nav-hover: #e9ecef;
+  --nav-hover: #e7e7e7;
   --button: #87CEEB;
   --button-text: #fff;
   --text: #111111;
@@ -59,7 +59,7 @@ body.dark {
   --header-bg: rgba(20, 20, 20, 1);
   --menu-bg: rgba(0, 0, 0, 0.9);
   --card-bg: #1e1e1e;
-  --nav-hover: #15222b;
+  --nav-hover: #222222;
   --button: #87CEEB;
   --button-text: #fff;
   --text: #eaeaea;
