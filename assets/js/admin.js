@@ -68,8 +68,8 @@ logoutBtn.addEventListener('click', async () => {
   showLogin();
 });
 
-homeBtn.addEventListener('click', () => window.location.href = "../index.html");
-homeBtnAdmin.addEventListener('click', () => window.location.href = "../index.html");
+homeBtn.addEventListener('click', () => window.location.href = "../");
+homeBtnAdmin.addEventListener('click', () => window.location.href = "../");
 
 autoBtn.addEventListener('click', async () => {
   const today = formatDate(new Date());
