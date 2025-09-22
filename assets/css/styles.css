@@ -57,7 +57,7 @@ img {
 body.dark {
   --bg: #121212;
   --header-bg: rgba(20, 20, 20, 1);
-  --menu-bg: rgba(0, 0, 0, 0.9);
+  --menu-bg: rgba(0, 0, 0, 1);
   --card-bg: #1e1e1e;
   --nav-hover: #222222;
   --button: #87CEEB;
@@ -588,7 +588,7 @@ body.dark .theme-toggle .moon {
 }
 
 .story-content {
-  padding: 0 20px;
+  padding: 20px;
   border-top: 1px solid var(--border);
   font-size: 1rem;
   line-height: 1.6;
