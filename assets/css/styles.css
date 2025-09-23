@@ -494,9 +494,9 @@ body.dark .theme-toggle .moon {
 
 .hero-top {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: center;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .profile-img {
