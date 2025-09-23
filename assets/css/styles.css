@@ -788,6 +788,10 @@ body.dark .theme-toggle .moon {
     padding: 0.95rem 1.1rem;
     font-size: 1rem;
   }
+   .nav a {
+    font-size: 1.1rem;
+    padding: 8px 12px;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -827,5 +831,9 @@ body.dark .theme-toggle .moon {
   .footer {
     padding: 3rem;
     font-size: 1.1rem;
+  }
+   .nav a {
+    font-size: 1.1rem;
+    padding: 8px 12px;
   }
 }
