@@ -678,7 +678,6 @@ body.dark .theme-toggle .moon {
     right: 0.8rem;
     width: 40px;
     height: 40px;
-    background: var(--nav-hover);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -741,7 +740,6 @@ body.dark .theme-toggle .moon {
     right: 0.8rem;
     width: 40px;
     height: 40px;
-    background: var(--nav-hover);
     border-radius: 50%;
     display: flex;
     justify-content: center;
