@@ -783,6 +783,15 @@ body.dark .theme-toggle .moon {
 }
 
 @media (min-width: 1024px) {
+  .nav {
+    display: flex;
+  }
+  .burger {
+    display: none;
+  }
+  .desktop-theme-toggle {
+    display: block;
+  }
   .video-grid iframe {
     height: 220px;
   }
@@ -825,6 +834,15 @@ body.dark .theme-toggle .moon {
 }
 
 @media (min-width: 1600px) {
+   .nav {
+    display: flex;
+  }
+  .burger {
+    display: none;
+  }
+  .desktop-theme-toggle {
+    display: block;
+  }
   .hero {
     max-width: 1800px;
     gap: 3rem;
@@ -850,6 +868,15 @@ body.dark .theme-toggle .moon {
 }
 
 @media (min-width: 2000px) {
+   .nav {
+    display: flex;
+  }
+  .burger {
+    display: none;
+  }
+  .desktop-theme-toggle {
+    display: block;
+  }
   .hero {
     max-width: 2200px;
     gap: 4rem;
