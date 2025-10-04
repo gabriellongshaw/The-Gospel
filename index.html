@@ -29,11 +29,6 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <script>
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.classList.add('dark');
-    }
-  </script>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
@@ -151,6 +146,10 @@
         <h3 class="center">Daily Bible Verse</h3>
         <p id="daily-verse" class="center-verse"></p>
         <p id="daily-reflection" class="meta center"></p>
+        <p class="btn-centered-wrapper">
+  <button class="simple-explanation-btn" id="daily-explainer-btn" style="display: none;" data-verse-ref="daily">Show Simpler Explanation</button>
+</p>
+<div class="simple-explanation-container" id="explanation-daily"></div>
       </div>
     </section>
 

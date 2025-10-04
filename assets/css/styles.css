@@ -42,6 +42,7 @@ img {
   --header-bg: rgba(255, 255, 255, 1);
   --menu-bg: rgba(255, 255, 255, 1); 
   --card-bg: #fafafa;
+  --card-bg-secondary: #f0f0f0;
   --nav-hover: #e7e7e7;
   --button: #87CEEB;
   --button-text: #fff;
@@ -60,6 +61,7 @@ body.dark {
   --header-bg: rgba(20, 20, 20, 1);
   --menu-bg: rgba(0, 0, 0, 1);
   --card-bg: #1e1e1e;
+  --card-bg-secondary: #151515;
   --nav-hover: #222222;
   --button: #87CEEB;
   --button-text: #fff;
@@ -612,6 +614,61 @@ body.dark .theme-toggle .moon {
   font-style: italic;
 }
 
+.verse-wrapper {
+  margin: 1rem 0 1.5rem 0; 
+  text-align: center; 
+}
+
+.simple-explanation-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease, padding 0.2s ease;
+  background-color: var(--card-bg-secondary);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.simple-explanation-container.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--border);
+}
+
+.simple-explanation-container p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.simple-explanation-btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  min-width: 140px;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--button-text);
+  background: var(--button);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, color 0.2s, padding 0.2s, min-width 0.2s ease;
+}
+
+.simple-explanation-btn.is-open {
+  background: var(--button);
+  color: var(--button-text);
+  padding: 0.7rem 1rem;
+  min-width: 155px;
+}
+
 @media (max-width: 768px) {
   .hero-top {
     flex-direction: column;
@@ -675,7 +732,7 @@ body.dark .theme-toggle .moon {
     padding: 1rem;
     font-size: 0.85rem;
   }
-  
+
   .mobile-menu .close-btn {
     position: absolute;
     top: 0.8rem;
@@ -737,7 +794,7 @@ body.dark .theme-toggle .moon {
   .footer {
     font-size: 0.85rem;
   }
-  
+
   .mobile-menu .close-btn {
     position: absolute;
     top: 0.8rem;
@@ -748,6 +805,24 @@ body.dark .theme-toggle .moon {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .simple-explanation-btn {
+    padding: 0.7rem 1.2rem;
+    min-width: 135px;
+    font-size: 0.9rem;
+  }
+
+  .simple-explanation-btn.is-open {
+    min-width: 150px;
+  }
+
+  .simple-explanation-container {
+    padding: 0 1rem;
+  }
+
+  .simple-explanation-container.open {
+    padding: 1rem;
   }
 }
 
@@ -830,6 +905,30 @@ body.dark .theme-toggle .moon {
    .nav a {
     font-size: 1.1rem;
     padding: 8px 12px;
+  }
+
+  .simple-explanation-btn {
+    padding: 0.8rem 1.4rem;
+    min-width: 150px;
+    font-size: 1rem;
+  }
+
+  .simple-explanation-btn.is-open {
+    min-width: 165px;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .simple-explanation-container {
+    margin-top: 0.8rem;
+    padding: 0 1.5rem;
+  }
+
+  .simple-explanation-container.open {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .simple-explanation-container p {
+    font-size: 1rem;
   }
 }
 
