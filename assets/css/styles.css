@@ -210,6 +210,11 @@ body.dark .theme-toggle .moon {
   border-radius: 2px;
 }
 
+.verse {
+  font-style: italic;
+  color: var(--accent);
+}
+
 .hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
