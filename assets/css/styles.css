@@ -582,7 +582,7 @@ body.dark .theme-toggle .moon {
   width: 20px;
   height: 20px;
   flex-shrink: 0;
-  transition: transform 0.3s ease, color 0.2s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
   color: var(--text);
 }
 
@@ -591,7 +591,7 @@ body.dark .theme-toggle .moon {
 }
 
 .story-dropdown[open] .story-summary .story-icon {
-  transform: rotate(45deg);
+  transform: rotate(135deg);
   color: var(--accent);
 }
 
@@ -613,7 +613,7 @@ body.dark .theme-toggle .moon {
   color: var(--text);
   overflow: hidden;
   height: 0;
-  transition: height 0.25s ease-out, padding 0.25s ease-out;
+  transition: height 0.3s ease, padding 0.3s ease;
 }
 
 .story-content.active-padding {
