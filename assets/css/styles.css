@@ -501,6 +501,19 @@ body.dark .theme-toggle .moon {
   line-height: 1.5;
 }
 
+.center-verse,
+#daily-reflection {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.center-verse.show,
+#daily-reflection.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;

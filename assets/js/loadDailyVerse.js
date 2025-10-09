@@ -124,12 +124,19 @@ export async function loadDailyVerse() {
   const reflectionEl = document.getElementById("daily-reflection");
   
   if (verseEl && reflectionEl) {
-    verseEl.textContent = `"${verseData.text}"`;
-    
-    reflectionEl.textContent = verseData.reflection;
-    
-    setupSimpleExplanationButtons(verseData.simple_explanation);
-  }
+  verseEl.classList.remove('show');
+  reflectionEl.classList.remove('show');
+
+  verseEl.textContent = `"${verseData.text}"`;
+  reflectionEl.textContent = verseData.reflection;
+  
+  requestAnimationFrame(() => {
+    verseEl.classList.add('show');
+    reflectionEl.classList.add('show');
+  });
+  
+  setupSimpleExplanationButtons(verseData.simple_explanation);
+}
 }
 
 document.addEventListener("DOMContentLoaded", () => {
