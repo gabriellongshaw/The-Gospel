@@ -112,13 +112,14 @@ body.dark {
 }
 
 .brand img {
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
+  border-radius: 20%;
   object-fit: contain;
 }
 
 .brand h1 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text);
   white-space: normal;
@@ -207,7 +208,7 @@ body.dark .theme-toggle .moon {
   width: 24px;
   height: 2px;
   background: var(--text);
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 .verse {
@@ -670,9 +671,10 @@ body.dark .theme-toggle .moon {
 }
 
 .simple-explanation-btn {
-  display: inline-block;
+  display: inline-flex;
   padding: 0.7rem 1.2rem;
   min-width: 140px;
+  width: auto;
   text-align: center;
   margin-top: 0.5rem;
   font-size: 0.9rem;
@@ -682,7 +684,7 @@ body.dark .theme-toggle .moon {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: opacity 0.2s ease, color 0.2s, padding 0.2s, min-width 0.2s ease;
+  transition: opacity 0.2s ease, color 0.2s, padding 0.2s ease, min-width 0.2s ease;
 }
 
 .simple-explanation-btn.is-open {
