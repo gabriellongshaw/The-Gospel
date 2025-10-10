@@ -76,8 +76,57 @@ const headerHTML = `
 
 const footerHTML = `
 <footer class="footer">
-  <p>© <span id="year"></span> The Gospel — a website made by Gabriel Longshaw to spread the good news.</p>
-  <p class="meta">Built to be simple and shareable.</p>
+  <div class="footer-top">
+    <h2 class="footer-title">The Gospel</h2>
+    <p class="footer-description">
+      The Gospel is a website dedicated to spreading the message of Jesus Christ through teaching, resources, 
+      and inspiration from trusted Christian voices. Our goal is to help others discover truth, hope, 
+      and salvation through the Word of God.
+    </p>
+  </div>
+
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Explore</h3>
+      <ul>
+        <li><a href="${pathPrefix}">Home</a></li>
+        <li><a href="${pathPrefix}resources/">Resources</a></li>
+        <li><a href="${pathPrefix}charlie-kirk/">Charlie Kirk</a></li>
+        <li><a href="${pathPrefix}billy-graham/">Billy Graham</a></li>
+        <li><a href="${pathPrefix}cliffe-and-stuart-knechtle/">Cliffe & Stuart Knechtle</a></li>
+        <li><a href="${pathPrefix}more/">More</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>About</h3>
+      <ul>
+        <li><a href="${pathPrefix}coming-soon/">Our Mission</a></li>
+        <li><a href="${pathPrefix}coming-soon/">What We Believe</a></li>
+        <li><a href="${pathPrefix}coming-soon/">Team</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Connect</h3>
+      <p class="no-contact">No contact currently available.</p>
+      <ul>
+        <li><a href="https://www.instagram.com/gabe.l07">Instagram</a></li>
+        <li><a href="https://youtube.com/@gabriellongshaw?si=DWkxGW_qTVH1oa1H">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      © <span id="year"></span> The Gospel. All rights reserved.
+      Website created and maintained by 
+      <a class="name" href="https://gabriellongshaw.co.uk/" target="_blank" rel="noopener">Gabriel Longshaw</a>.
+    </p>
+    <p class="meta">
+Jesus said to him, “I am the way, the truth, and the life. No one comes to the Father except through Me.”‭‭John‬‭ 14‬: ‭6‬‭ NKJV‬‬
+</p>
+  </div>
 </footer>
 `;
 
