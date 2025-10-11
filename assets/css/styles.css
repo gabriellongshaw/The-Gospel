@@ -372,8 +372,8 @@ body.dark .theme-toggle .moon {
 .footer {
   background: var(--footer-bg);
   color: var(--text-color);
-  padding: 70px 20px 35px;
-  font-size: 15px;
+  padding: 1rem;
+  font-size: 0.8rem;
 }
 
 .footer-top {
@@ -417,8 +417,8 @@ body.dark .theme-toggle .moon {
 
 .footer-section h3 {
   font-size: 1rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
   letter-spacing: 0.3px;
 }
 
@@ -843,30 +843,6 @@ body.dark .theme-toggle .moon {
   }
   .story-content {
     font-size: 0.9rem;
-  }
-  .footer {
-    padding: 1.5rem;
-    font-size: 0.85rem;
-  }
-  .footer-container {
-    flex-direction: column;
-    align-items: left;
-    text-align: left;
-  }
-  .footer-section {
-    flex: 1 1 100%;
-    min-width: unset;
-    margin-bottom: 1.5rem;
-  }
-  .footer-top {
-    text-align: left;
-    margin-bottom: 2rem;
-  }
-  .footer-description {
-    font-size: 0.85rem;
-  }
-  .footer-bottom {
-    font-size: 0.75rem;
   }
   .mobile-menu .close-btn {
     position: absolute;
