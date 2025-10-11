@@ -124,7 +124,7 @@ const footerHTML = `
       <a class="name" href="https://gabriellongshaw.co.uk/" target="_blank" rel="noopener">Gabriel Longshaw</a>.
     </p>
     <p class="meta">
-Jesus said to him, “I am the way, the truth, and the life. No one comes to the Father except through Me.” ‭‭John‬‭ 14‬: ‭6‬‭ NKJV‬‬
+Jesus said to him, “I am the way, the truth, and the life. No one comes to the Father except through Me.” ‭‭John‬‭ 14‬:‭6 NKJV‬‬
 </p>
   </div>
 </footer>
@@ -135,6 +135,19 @@ const footerPlaceholder = document.getElementById('footer-placeholder');
 
 if (headerPlaceholder) headerPlaceholder.innerHTML = headerHTML;
 if (footerPlaceholder) footerPlaceholder.innerHTML = footerHTML;
+else {
+    const errorElement = document.createElement('div');
+    errorElement.style.background = 'var(--footer-bg)';
+    errorElement.style.color = 'var(--text)';
+    errorElement.style.padding = '20px';
+    errorElement.style.textAlign = 'center';
+    errorElement.innerHTML = `
+        <p><strong>Error 404: Footer could not be loaded.</strong></p>
+        <p>The placeholder element with ID "footer-placeholder" was not found in the HTML.</p>
+        <p><strong>Code:</strong> ELEMENT_NOT_FOUND</p>
+    `;
+document.body.appendChild(errorElement); 
+}
 
 const toggles = document.querySelectorAll('.theme-toggle');
 
