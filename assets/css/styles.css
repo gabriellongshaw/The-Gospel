@@ -843,10 +843,29 @@ body.dark .theme-toggle .moon {
     font-size: 0.9rem;
   }
   .footer {
-    padding: 1rem;
+    padding: 1.5rem;
     font-size: 0.85rem;
   }
-
+  .footer-container {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+  }
+  .footer-section {
+    flex: 1 1 100%;
+    min-width: unset;
+    margin-bottom: 1.5rem;
+  }
+  .footer-top {
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .footer-description {
+    font-size: 0.85rem;
+  }
+  .footer-bottom {
+    font-size: 0.75rem;
+  }
   .mobile-menu .close-btn {
     position: absolute;
     top: 0.8rem;
@@ -906,9 +925,26 @@ body.dark .theme-toggle .moon {
     font-size: 0.95rem;
   }
   .footer {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    padding: 2rem;
   }
-
+  .footer-container {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-section {
+    flex: 1 1 45%;
+  }
+  .footer-section h3 {
+    font-size: 0.95rem;
+  }
+  .footer-description {
+    font-size: 0.9rem;
+  }
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
   .mobile-menu .close-btn {
     position: absolute;
     top: 0.8rem;
@@ -920,21 +956,17 @@ body.dark .theme-toggle .moon {
     justify-content: center;
     align-items: center;
   }
-
   .simple-explanation-btn {
     padding: 0.7rem 1.2rem;
     min-width: 135px;
     font-size: 0.9rem;
   }
-
   .simple-explanation-btn.is-open {
     min-width: 150px;
   }
-
   .simple-explanation-container {
     padding: 0 1rem;
   }
-
   .simple-explanation-container.open {
     padding: 1rem;
   }
@@ -968,6 +1000,26 @@ body.dark .theme-toggle .moon {
   }
   .video-card iframe {
     height: 180px;
+  }
+  .footer {
+    padding: 2.5rem;
+    font-size: 0.95rem;
+  }
+  .footer-container {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .footer-section {
+    flex: 1 1 200px;
+    min-width: 200px;
+  }
+  .footer-section h3 {
+    font-size: 1rem;
+  }
+  .footer-description {
+    font-size: 0.9rem;
   }
 }
 
@@ -1020,29 +1072,47 @@ body.dark .theme-toggle .moon {
     font-size: 1.1rem;
     padding: 8px 12px;
   }
-
   .simple-explanation-btn {
     padding: 0.8rem 1.4rem;
     min-width: 150px;
     font-size: 1rem;
   }
-
   .simple-explanation-btn.is-open {
     min-width: 165px;
     padding: 0.8rem 1.2rem;
   }
-
   .simple-explanation-container {
     margin-top: 0.8rem;
     padding: 0 1.5rem;
   }
-
   .simple-explanation-container.open {
     padding: 1.2rem 1.5rem;
   }
-
   .simple-explanation-container p {
     font-size: 1rem;
+  }
+  .footer {
+    padding: 3rem;
+    font-size: 1rem;
+  }
+  .footer-container {
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .footer-section {
+    flex: 1 1 250px;
+    min-width: 250px;
+  }
+  .footer-section h3 {
+    font-size: 1.05rem;
+  }
+  .footer-description {
+    font-size: 0.95rem;
+  }
+  .footer-bottom {
+    font-size: 0.85rem;
   }
 }
 
@@ -1068,15 +1138,33 @@ body.dark .theme-toggle .moon {
     padding: 3rem;
   }
   .brand h1 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
   .nav a {
     font-size: 1.1rem;
     padding: 8px 12px;
   }
   .footer {
-    padding: 2.5rem;
+    padding: 3.5rem;
+    font-size: 1.05rem;
+  }
+  .footer-container {
+    max-width: 1200px;
+    gap: 2.5rem;
+    justify-content: space-between;
+  }
+  .footer-section {
+    flex: 1 1 200px;
+    min-width: 200px;
+  }
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+  .footer-description {
     font-size: 1rem;
+  }
+  .footer-bottom {
+    font-size: 0.9rem;
   }
 }
 
@@ -1099,8 +1187,26 @@ body.dark .theme-toggle .moon {
     padding: 4rem;
   }
   .footer {
-    padding: 3rem;
+    padding: 4rem;
     font-size: 1.1rem;
+  }
+  .footer-container {
+    max-width: 1400px;
+    gap: 3rem;
+    justify-content: space-between;
+  }
+  .footer-section {
+    flex: 1 1 250px;
+    min-width: 250px;
+  }
+  .footer-section h3 {
+    font-size: 1.2rem;
+  }
+  .footer-description {
+    font-size: 1.05rem;
+  }
+  .footer-bottom {
+    font-size: 0.95rem;
   }
    .nav a {
     font-size: 1.1rem;
