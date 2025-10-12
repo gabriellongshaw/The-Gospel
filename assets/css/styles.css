@@ -328,6 +328,11 @@ body.dark .theme-toggle .moon {
   margin-bottom: 0.5rem;
 }
 
+.section-title {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
 .card-grid {
   display: grid;
   gap: 1.2rem;
@@ -337,12 +342,12 @@ body.dark .theme-toggle .moon {
 .card {
   background: var(--card-bg);
   padding: 1rem;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid var(--border);
 }
 
 .card h3 {
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.3rem;
 }
 
 .video-row {
@@ -357,7 +362,7 @@ body.dark .theme-toggle .moon {
   flex: 0 0 80%;
   max-width: 400px;
   background: var(--card-bg);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 0.5rem;
   scroll-snap-align: start;
 }
@@ -365,8 +370,40 @@ body.dark .theme-toggle .moon {
 .video-card iframe {
   width: 100%;
   height: 200px;
-  border-radius: 6px;
+  border-radius: 12px;
   border: none;
+}
+
+.article-card-link img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+  border-radius: 12px;
+}
+
+.article-card-link p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.video-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 0.5rem;
+}
+
+.video-card h4.section-title {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.video-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .footer {
@@ -783,6 +820,50 @@ body.dark .theme-toggle .moon {
   color: var(--button-text);
   padding: 0.7rem 1rem;
   min-width: 155px;
+}
+
+.faq-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.faq-item {
+  background: var(--card-bg);
+  padding: 1rem 1rem 0;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.faq-item h4.section-title {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.faq-question {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  padding: 0 0 5px 0;
+  margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+  background: var(--card-bg-secondary);
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  border-radius: 6px;
+  border-left: 3px solid var(--accent);
+  color: var(--text);
+}
+
+.faq-item p strong {
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 0.3rem;
 }
 
 @media (max-width: 768px) {
