@@ -414,9 +414,12 @@ body.dark .theme-toggle .moon {
 }
 
 .footer-top {
-  text-align: left;
   max-width: 850px;
   margin: 1rem auto 2rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer-title {
