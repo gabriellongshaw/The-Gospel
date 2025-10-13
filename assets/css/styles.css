@@ -1005,16 +1005,16 @@ body.dark .theme-toggle .moon {
     flex: 1 1 45%;
   }
   .footer-section h3 {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   .footer-description {
     font-size: 0.9rem;
   }
   .footer-bottom {
-    font-size: 0.75rem; 
+    font-size: 0.7rem; 
   }
   .footer .meta {
-    font-size: 0.75rem; 
+    font-size: 0.7rem; 
   }
   .mobile-menu .close-btn {
     position: absolute;
@@ -1171,11 +1171,11 @@ body.dark .theme-toggle .moon {
   }
   .footer-title {
     font-size: 1.1rem; 
-    max-width: 650px;
+    max-width: 700px;
   }
   .footer-description {
     font-size: 0.9rem; 
-    max-width: 650px;
+    max-width: 1200px;
     margin: 0 auto; 
     text-align: center; 
   }
@@ -1230,11 +1230,10 @@ body.dark .theme-toggle .moon {
   }
   .footer {
     padding: 3.5rem;
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
-
   .footer-title {
-    font-size: 1.05rem; 
+    font-size: 1rem; 
     max-width: 700px;
   }
   .footer-description {
@@ -1283,17 +1282,16 @@ body.dark .theme-toggle .moon {
     padding: 4rem;
     font-size: 1.1rem;
   }
-
   .footer-top {
     max-width: 1000px; 
   }
   .footer-title {
     font-size: 1rem; 
-    max-width: 800px;
+    max-width: 1000px;
   }
   .footer-description {
     font-size: 0.9rem; 
-    max-width: 800px;
+    max-width: 1400px;
   }
   .footer-container {
     max-width: 1400px;
