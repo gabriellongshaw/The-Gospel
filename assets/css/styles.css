@@ -414,7 +414,7 @@ body.dark .theme-toggle .moon {
 }
 
 .footer-top {
-  max-width: 850px;
+  max-width: 1200px;
   margin: 1rem auto 2rem;
   text-align: left; 
   display: flex;
@@ -428,15 +428,14 @@ body.dark .theme-toggle .moon {
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
   line-height: 1.2;
-  max-width: 600px; 
+  max-width: 1200px; 
 }
 
 .footer-description {
   font-size: 0.9rem;
   line-height: 1.75;
   opacity: 0.9;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 1200px;
   color: var(--text);
   text-align: left; 
 }
@@ -446,7 +445,7 @@ body.dark .theme-toggle .moon {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto 2rem;
 }
 
@@ -1166,18 +1165,11 @@ body.dark .theme-toggle .moon {
     padding: 3rem;
     font-size: 1rem;
   }
-  .footer-top {
-    max-width: 1200px;
-  }
   .footer-title {
     font-size: 1.1rem; 
-    max-width: 700px;
   }
   .footer-description {
     font-size: 0.9rem; 
-    max-width: 1200px;
-    margin: 0 auto; 
-    text-align: center; 
   }
   .footer-container {
     gap: 2rem;
@@ -1234,14 +1226,11 @@ body.dark .theme-toggle .moon {
   }
   .footer-title {
     font-size: 1rem; 
-    max-width: 700px;
   }
   .footer-description {
-    font-size: 0.9rem; 
-    max-width: 700px;
+    font-size: 0.9rem;
   }
   .footer-container {
-    max-width: 1200px;
     gap: 2.5rem;
     justify-content: space-between;
   }
@@ -1282,19 +1271,13 @@ body.dark .theme-toggle .moon {
     padding: 4rem;
     font-size: 1.1rem;
   }
-  .footer-top {
-    max-width: 1000px; 
-  }
   .footer-title {
-    font-size: 1rem; 
-    max-width: 1000px;
+    font-size: 1rem;
   }
   .footer-description {
     font-size: 0.9rem; 
-    max-width: 1400px;
   }
   .footer-container {
-    max-width: 1400px;
     gap: 3rem;
     justify-content: space-between;
   }
