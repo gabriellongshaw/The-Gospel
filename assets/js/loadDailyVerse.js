@@ -3,16 +3,16 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebas
 import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 
 const hardcodedExplanations = {
-  "John 3:16": "God loves the world so much that He gave His only Son, Jesus. Anyone who trusts in Jesus won't be lost forever but will get to live with God eternally.",
-  "Romans 6:23": "The penalty for doing wrong (sin) is spiritual death, but God's free gift is a forever life, which you get through Jesus Christ.",
-  "John 14:6": "Jesus is saying He is the only path to God, the complete truth about life, and the source of real, eternal life.",
-  "Isaiah 9:6": "This is a prophecy about Jesus, saying He would be born as a human but have divine roles: a brilliant guide, a powerful God, a never-ending father figure, and a ruler who brings peace.",
-  "Luke 1:30-33": "An angel told Mary she was special and would have a Son, Jesus, who is the Son of God. He'll be a great king whose rule will last forever.",
-  "Matthew 2:10-11": "When the wise men found Jesus, they were overjoyed. They bowed down and gave Him expensive, symbolic gifts (gold, frankincense, and myrrh).",
-  "Romans 5:8": "God proved His love: even when we were doing things wrong (sinning) and deserved nothing, Jesus died for us.",
-  "1 Peter 1:3": "Praise God! Because He is so kind and merciful, He gave us a new life and a solid hope for the future by raising Jesus from the dead.",
-  "Luke 15:20": "The father spotted his son returning from a long way off, felt overwhelming pity, ran to him, and hugged him immediately. This shows God's eager forgiveness.",
-  "Luke 10:36-37": "Jesus asks who acted like a true neighbor (the Samaritan, who was kind). He then tells us to go and act the same way—show real kindness and help to anyone in need.",
+  "John 3:16 (NKJV)": "God loves the world so much that He gave His only Son, Jesus. Anyone who trusts in Jesus won't be lost forever but will get to live with God eternally.",
+  "Romans 6:23 (NKJV)": "The penalty for doing wrong (sin) is spiritual death, but God's free gift is a forever life, which you get through Jesus Christ.",
+  "John 14:6 (NKJV)": "Jesus is saying He is the only path to God, the complete truth about life, and the source of real, eternal life.",
+  "Isaiah 9:6 (NKJV)": "This is a prophecy about Jesus, saying He would be born as a human but have divine roles: a brilliant guide, a powerful God, a never-ending father figure, and a ruler who brings peace.",
+  "Luke 1:30-33 (NKJV)": "An angel told Mary she was special and would have a Son, Jesus, who is the Son of God. He'll be a great king whose rule will last forever.",
+  "Matthew 2:10-11 (NKJV)": "When the wise men found Jesus, they were overjoyed. They bowed down and gave Him expensive, symbolic gifts (gold, frankincense, and myrrh).",
+  "Romans 5:8 (NKJV)": "God proved His love: even when we were doing things wrong (sinning) and deserved nothing, Jesus died for us.",
+  "1 Peter 1:3 (NKJV)": "Praise God! Because He is so kind and merciful, He gave us a new life and a solid hope for the future by raising Jesus from the dead.",
+  "Luke 15:20 (NKJV)": "The father spotted his son returning from a long way off, felt overwhelming pity, ran to him, and hugged him immediately. This shows God's eager forgiveness.",
+  "Luke 10:36-37 (NKJV)": "Jesus asks who acted like a true neighbor (the Samaritan, who was kind). He then tells us to go and act the same way—show real kindness and help to anyone in need.",
 };
 
 const firebaseConfig = {
@@ -46,6 +46,7 @@ function setupSimpleExplanationButtons(dailyVerseExplanation) {
     if (verseRef === 'daily') {
       explanationText = dailyVerseExplanation || "Loading simpler explanation...";
     }
+
     else if (hardcodedExplanations[verseRef]) {
       explanationText = hardcodedExplanations[verseRef];
     } else {
@@ -124,19 +125,20 @@ export async function loadDailyVerse() {
   const reflectionEl = document.getElementById("daily-reflection");
   
   if (verseEl && reflectionEl) {
-  verseEl.classList.remove('show');
-  reflectionEl.classList.remove('show');
+    verseEl.classList.remove('show');
+    reflectionEl.classList.remove('show');
 
-  verseEl.textContent = `"${verseData.text}"`;
-  reflectionEl.textContent = verseData.reflection;
+    verseEl.textContent = `"${verseData.text}" ${verseData.reference}`;
+
+    reflectionEl.textContent = verseData.reflection;
   
-  requestAnimationFrame(() => {
-    verseEl.classList.add('show');
-    reflectionEl.classList.add('show');
-  });
+    requestAnimationFrame(() => {
+      verseEl.classList.add('show');
+      reflectionEl.classList.add('show');
+    });
   
-  setupSimpleExplanationButtons(verseData.simple_explanation);
-}
+    setupSimpleExplanationButtons(verseData.simple_explanation);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
