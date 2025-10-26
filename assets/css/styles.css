@@ -251,6 +251,13 @@ body.dark .theme-toggle .moon {
   text-align: left;
 }
 
+.hero-card-centered-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+  text-align: center;
+}
+
 .hero-card .verse {
   font-size: 0.9rem;
   font-style: italic;
@@ -277,6 +284,10 @@ body.dark .theme-toggle .moon {
 
 .lead {
   font-size: 0.9rem;
+}
+
+.small-title, .card .small-title {
+  font-size: 1rem;
 }
 
 .btn-centered {
