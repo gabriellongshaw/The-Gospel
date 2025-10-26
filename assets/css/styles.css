@@ -245,14 +245,14 @@ body.dark .theme-toggle .moon {
 }
 
 .hero-card-title {
-  font-size: 1.4rem;
+  font-size: 1rem;
   margin-bottom: 0.3rem;
   color: var(--text);
   text-align: left;
 }
 
 .hero-card .verse {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-style: italic;
   color: var(--accent);
   text-align: center;
@@ -276,7 +276,7 @@ body.dark .theme-toggle .moon {
 }
 
 .lead {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .btn-centered {
@@ -347,7 +347,12 @@ body.dark .theme-toggle .moon {
 }
 
 .card h3 {
+  font-size: 1.1rem;
   margin-bottom: 0.3rem;
+}
+
+.card p {
+  font-size: 0.9rem;
 }
 
 .video-row {
@@ -795,7 +800,7 @@ body.dark .theme-toggle .moon {
 }
 
 .simple-explanation-container p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   color: var(--text);
   margin: 0;
@@ -901,26 +906,29 @@ body.dark .theme-toggle .moon {
     padding: 1rem;
   }
   .hero-card h3 {
-    font-size: 1.2rem;
-  }
-  .hero-card .verse {
     font-size: 1rem;
   }
+  .hero-card .verse {
+    font-size: 0.9rem;
+  }
+  .hero-card p {
+    font-size: 0.9rem;
+  }
   .hero-card .meta {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
   .daily-verse-card {
     padding: 1rem;
     margin: 1rem auto;
   }
   .daily-verse-card h3 {
-    font-size: 1.2rem;
-  }
-  .center-verse {
     font-size: 1rem;
   }
+  .center-verse {
+    font-size: 0.9rem;
+  }
   #daily-reflection {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   .story-summary {
     font-size: 0.9rem;
