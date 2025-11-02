@@ -111,7 +111,7 @@ const footerHTML = `
       <h3>Connect</h3>
       <p class="no-contact">No contact currently available.</p>
       <ul>
-        <li><a href="https://www.instagram.com/gabe.l07">Instagram</a></li>
+        <li><a href="https://www.instagram.com/gabriellongshaw">Instagram</a></li>
         <li><a href="https://youtube.com/@gabriellongshaw?si=DWkxGW_qTVH1oa1H">YouTube</a></li>
       </ul>
     </div>
@@ -121,7 +121,7 @@ const footerHTML = `
     <p>
       © <span id="year"></span> The Gospel. All rights reserved.
       Website created and maintained by 
-      <a class="name" href="https://gabriellongshaw.co.uk/" target="_blank" rel="noopener">Gabriel Longshaw</a>.
+      <a class="name" href="https://www.gabriellongshaw.co.uk/" target="_blank" rel="noopener">Gabriel Longshaw</a>.
     </p>
     <p class="meta">
 Jesus said to him, “I am the way, the truth, and the life. No one comes to the Father except through Me.” ‭‭John‬‭ 14‬:‭6 NKJV‬‬
