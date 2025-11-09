@@ -133,20 +133,30 @@ Jesus said to him, “I am the way, the truth, and the life. No one comes to the
 const headerPlaceholder = document.getElementById('header-placeholder');
 const footerPlaceholder = document.getElementById('footer-placeholder');
 
-if (headerPlaceholder) headerPlaceholder.innerHTML = headerHTML;
-if (footerPlaceholder) footerPlaceholder.innerHTML = footerHTML;
-else {
-    const errorElement = document.createElement('div');
-    errorElement.style.background = 'var(--footer-bg)';
-    errorElement.style.color = 'var(--text)';
-    errorElement.style.padding = '20px';
-    errorElement.style.textAlign = 'center';
-    errorElement.innerHTML = `
-        <p><strong>Error 404: Footer could not be loaded.</strong></p>
-        <p>The placeholder element with ID "footer-placeholder" was not found in the HTML.</p>
-        <p><strong>Code:</strong> ELEMENT_NOT_FOUND</p>
-    `;
-document.body.appendChild(errorElement); 
+const currentPath = window.location.pathname;
+const isAdminPage = currentPath.includes('/admin/'); 
+
+if (!isAdminPage) {
+  
+    if (headerPlaceholder) {
+        headerPlaceholder.innerHTML = headerHTML;
+    }
+    
+    if (footerPlaceholder) {
+        footerPlaceholder.innerHTML = footerHTML;
+    } else {
+        const errorElement = document.createElement('div');
+        errorElement.style.background = 'var(--footer-bg)';
+        errorElement.style.color = 'var(--text)';
+        errorElement.style.padding = '20px';
+        errorElement.style.textAlign = 'center';
+        errorElement.innerHTML = `
+            <p><strong>Error 404: Footer could not be loaded.</strong></p>
+            <p>The placeholder element with ID "footer-placeholder" was not found in the HTML.</p>
+            <p><strong>Code:</strong> ELEMENT_NOT_FOUND</p>
+        `;
+        document.body.appendChild(errorElement); 
+    }
 }
 
 const toggles = document.querySelectorAll('.theme-toggle');
@@ -190,8 +200,8 @@ if (burger && mobileMenu && closeBtn) {
 }
 
 const yearSpan = document.getElementById('year');
+
 if (yearSpan) {
-  
   yearSpan.textContent = new Date().getFullYear();
 }
 
