@@ -242,6 +242,9 @@
   .hero {
     padding: 2rem 2rem;
   }
+  .hero.hero-centered {
+    margin-top: 3rem;
+  }
   .header-inner {
     padding: 1rem 2rem;
   }
