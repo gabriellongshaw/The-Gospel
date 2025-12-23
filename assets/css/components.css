@@ -154,7 +154,7 @@ body.dark .theme-toggle .moon {
   grid-template-columns: 1fr;
   justify-items: center;
   place-items: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .hero-card {
