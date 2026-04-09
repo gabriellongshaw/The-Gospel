@@ -109,10 +109,11 @@ const footerHTML = `
 
     <div class="footer-section">
       <h3>Connect</h3>
-      <p class="no-contact">No contact currently available.</p>
       <ul>
-        <li><a href="https://www.instagram.com/gabriellongshaw">Instagram</a></li>
-        <li><a href="https://youtube.com/@gabriellongshaw?si=DWkxGW_qTVH1oa1H">YouTube</a></li>
+        <li><a href="https://github.com/gabriellongshaw" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.instagram.com/gabriellongshaw" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://youtube.com/@gabriellongshaw" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://t.me/gabriellongshaw" target="_blank" rel="noopener">Telegram</a></li>
       </ul>
     </div>
   </div>
@@ -120,7 +121,7 @@ const footerHTML = `
   <div class="footer-bottom">
     <p>
       © <span id="year"></span> The Gospel. All rights reserved.
-      Website created and maintained by 
+      Website designed and developed by 
       <a class="name" href="https://www.gabriellongshaw.co.uk/" target="_blank" rel="noopener">Gabriel Longshaw</a>.
     </p>
     <p class="meta">
