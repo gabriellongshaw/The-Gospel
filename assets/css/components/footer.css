@@ -96,9 +96,9 @@
 }
 
 .footer-devby a {
-  transition: opacity 0.15s;
+  transition: color 0.2s;
 }
 
 .footer-devby a:hover {
-  opacity: 0.75;
+  color: var(--accent);
 }

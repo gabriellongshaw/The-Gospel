@@ -103,6 +103,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 0 3rem 0 0;
     gap: 3rem;
   }
   .footer-col-brand {
