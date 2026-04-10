@@ -6,7 +6,7 @@ export function createHeader(links, pathPrefix) {
 <header class="header">
   <div class="header-inner">
     <a href="${pathPrefix}" class="brand">
-      <img src="${pathPrefix}assets/images/logo.png" alt="The Gospel logo" width="28" height="28">
+      <img src="${pathPrefix}assets/images/logo/logo.png" alt="The Gospel logo" width="28" height="28">
       <span class="brand-name">The Gospel</span>
     </a>
     <nav class="nav" aria-label="Main navigation">${navLinks}</nav>
