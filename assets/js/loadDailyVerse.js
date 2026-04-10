@@ -46,7 +46,11 @@ function setupSimpleExplBtn(button, explanationText) {
   button.addEventListener('click', () => {
     const isOpen = container.classList.contains('open');
     container.classList.toggle('open', !isOpen);
-    button.textContent = isOpen ? 'Show Simpler Explanation' : 'Hide Explanation';
+    button.style.opacity = '0';
+    setTimeout(() => {
+      button.textContent = isOpen ? 'Show Simpler Explanation' : 'Hide Explanation';
+      button.style.opacity = '1';
+    }, 150);
   });
 }
 

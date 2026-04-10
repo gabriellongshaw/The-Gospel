@@ -4,14 +4,8 @@ export function createFooter() {
   const placeholder = document.getElementById('footer-placeholder');
   if (!placeholder) return;
 
-  const currentPath = window.location.pathname;
-
   const exploreLinks = pages.map(page => {
-    const isHome = page.href === '/';
-    const isActive = isHome
-      ? (currentPath === '/' || currentPath === '/index.html')
-      : currentPath.startsWith(page.href);
-    return `<li><a href="${page.href}"${isActive ? ' class="active"' : ''}>${page.name}</a></li>`;
+    return `<li><a href="${page.href}">${page.name}</a></li>`;
   }).join('');
 
   const footer = document.createElement('footer');

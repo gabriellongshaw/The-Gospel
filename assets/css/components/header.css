@@ -126,13 +126,20 @@
   .nav { display: flex; }
 }
 
-@media (min-width: 600px) {
-  .header-inner { padding: 0 1.5rem; }
+@media (min-width: 640px) {
+  .header-inner { padding: 0 2rem; }
 }
 
 @media (min-width: 1024px) {
   .header-inner {
     padding: 0 2rem;
     height: 60px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header-inner {
+    max-width: 1200px;
+    padding: 0;
   }
 }

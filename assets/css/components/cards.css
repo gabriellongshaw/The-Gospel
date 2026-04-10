@@ -109,7 +109,7 @@
   color: var(--button-secondary-text);
   font-size: 0.88rem;
   cursor: pointer;
-  transition: border-color 0.2s, background 0.2s;
+  transition: border-color 0.2s, background 0.2s, opacity 0.15s ease;
   font-family: inherit;
   white-space: nowrap;
 }
