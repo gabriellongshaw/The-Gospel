@@ -167,12 +167,3 @@
   from { opacity: 0; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-
-@media (max-width: 480px) {
-  .hero-section { padding: 6rem 1rem 3.5rem; min-height: 60vh; }
-  .page-hero { padding: 5rem 1rem 2.5rem; }
-}
-
-@media (orientation: landscape) and (max-height: 520px) {
-  .hero-section { min-height: unset; padding: 5rem 1.25rem 3rem; }
-}

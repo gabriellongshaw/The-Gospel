@@ -100,7 +100,9 @@
 
 /* Simple explanation button + container */
 .simple-expl-btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 0.25rem;
   padding: 0.5rem 1.1rem;
   border: 1px solid var(--border);
@@ -109,14 +111,37 @@
   color: var(--button-secondary-text);
   font-size: 0.88rem;
   cursor: pointer;
-  transition: border-color 0.2s, background 0.2s, opacity 0.15s ease;
   font-family: inherit;
   white-space: nowrap;
+  overflow: hidden;
+  max-width: 220px;
+  width: 220px;
+  transition: border-color 0.25s, background 0.25s, width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .simple-expl-btn:hover {
   border-color: var(--accent);
   background: var(--accent-light);
+}
+
+.simple-expl-btn-text {
+  display: inline-block;
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.simple-expl-btn.animating .simple-expl-btn-text {
+  transform: translateX(8px);
+  opacity: 0;
+}
+
+.simple-expl-btn.shrinking {
+  width: 44px;
+}
+
+.simple-expl-btn.expanding {
+  width: 220px;
 }
 
 .simple-expl-container {
@@ -320,22 +345,4 @@
   padding-left: 0.75rem;
   border-left: 2px solid var(--accent);
   line-height: 1.55;
-}
-
-@media (min-width: 900px) {
-  .video-row {
-    flex-wrap: wrap;
-    overflow-x: visible;
-    scroll-snap-type: none;
-  }
-  .video-card {
-    flex: 1 1 calc(33% - 0.7rem);
-    max-width: 350px;
-  }
-}
-
-@media (max-width: 480px) {
-  .card { padding: 1.1rem; }
-  .daily-verse-card { padding: 1.25rem 1rem; }
-  .card-grid { grid-template-columns: 1fr; }
 }

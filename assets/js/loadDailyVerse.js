@@ -1,4 +1,4 @@
-import { verses } from './verses.js';
+import { verses } from './data/verses.js';
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 
@@ -32,6 +32,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+function animateBtnText(button, newText) {
+  const span = button.querySelector('.simple-expl-btn-text');
+  if (!span) return;
+
+  button.classList.add('animating');
+
+  setTimeout(() => {
+    span.textContent = newText;
+    button.classList.remove('animating');
+  }, 200);
+}
+
 function setupSimpleExplBtn(button, explanationText) {
   const containerId = `explanation-${button.dataset.verseRef}`;
   const container = document.getElementById(containerId);
@@ -46,11 +58,26 @@ function setupSimpleExplBtn(button, explanationText) {
   button.addEventListener('click', () => {
     const isOpen = container.classList.contains('open');
     container.classList.toggle('open', !isOpen);
-    button.style.opacity = '0';
-    setTimeout(() => {
-      button.textContent = isOpen ? 'Show Simpler Explanation' : 'Hide Explanation';
-      button.style.opacity = '1';
-    }, 150);
+
+    const nextText = isOpen ? 'Show Simpler Explanation' : 'Hide Explanation';
+
+    if (!isOpen) {
+      button.classList.add('shrinking');
+      setTimeout(() => {
+        animateBtnText(button, nextText);
+        button.classList.remove('shrinking');
+        button.classList.add('expanding');
+        setTimeout(() => button.classList.remove('expanding'), 350);
+      }, 180);
+    } else {
+      button.classList.add('shrinking');
+      setTimeout(() => {
+        animateBtnText(button, nextText);
+        button.classList.remove('shrinking');
+        button.classList.add('expanding');
+        setTimeout(() => button.classList.remove('expanding'), 350);
+      }, 180);
+    }
   });
 }
 
@@ -86,7 +113,7 @@ async function loadDailyVerse() {
   }
 
   if (btn && verseData.simple_explanation) {
-    btn.style.display = 'inline-block';
+    btn.style.display = 'inline-flex';
     const explanation = verseData.simple_explanation || hardcodedExplanations[verseData.reference] || '';
     setupSimpleExplBtn(btn, explanation);
   }

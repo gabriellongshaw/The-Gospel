@@ -23,7 +23,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0 1.25rem;
+  padding: 0 1.75rem;
   height: 56px;
   display: flex;
   align-items: center;
@@ -137,17 +137,4 @@
 
 .mobile-menu.active .mobile-menu-verse {
   opacity: 0.85;
-}
-
-@media (min-width: 600px) {
-  .mobile-close-btn-wrap {
-    padding: 0 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .mobile-close-btn-wrap {
-    padding: 0 2rem;
-    height: 60px;
-  }
 }
