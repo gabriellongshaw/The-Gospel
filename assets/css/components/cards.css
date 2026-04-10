@@ -1,0 +1,339 @@
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1.4rem 1.5rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 28px var(--shadow);
+  transform: translateY(-2px);
+}
+
+.card-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.55rem;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--text);
+  opacity: 0.85;
+  line-height: 1.65;
+}
+
+.card .verse-inline {
+  display: block;
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid var(--accent);
+  line-height: 1.55;
+}
+
+/* Daily verse card */
+.daily-verse-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto;
+  box-shadow: 0 4px 24px var(--shadow);
+}
+
+.daily-verse-card h2 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.daily-verse-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--verse-color);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.daily-verse-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.daily-reflection {
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--hover-bg);
+  padding: 0.9rem 1rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  text-align: left;
+  line-height: 1.65;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s ease 0.12s, transform 0.6s ease 0.12s;
+  margin-bottom: 1rem;
+}
+
+.daily-reflection.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Simple explanation button + container */
+.simple-expl-btn {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.simple-expl-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.simple-expl-container {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: height 0.35s ease, opacity 0.3s ease;
+  margin-top: 0;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.simple-expl-container.open {
+  margin-top: 0.75rem;
+}
+
+.simple-expl-container-inner {
+  padding: 0.9rem 1rem;
+  background: var(--card-bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* Video cards */
+.video-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.video-card {
+  flex: 0 0 min(78%, 320px);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.video-card:hover {
+  box-shadow: 0 4px 18px var(--shadow);
+  transform: translateY(-1px);
+}
+
+.video-card a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.video-card img, .video-card iframe {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+  border: none;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 170px;
+  background: var(--card-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1.6rem;
+}
+
+.video-card-body {
+  padding: 0.7rem 0.9rem 0.85rem;
+}
+
+.video-card-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.video-card-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* Feeling / scripture cards */
+.feeling-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.feeling-card:hover {
+  box-shadow: 0 4px 16px var(--shadow);
+  transform: translateY(-1px);
+}
+
+.feeling-card-label {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.feeling-card p {
+  font-size: 0.875rem;
+  color: var(--text);
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+/* CTA buttons */
+.btn-primary {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary:hover {
+  background: var(--button-bg-hover);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--hover-bg);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* Highlight / covenant box */
+.highlight-box {
+  background: var(--accent-light);
+  border: 1px solid var(--accent);
+  border-radius: 14px;
+  padding: 1.4rem 1.5rem;
+}
+
+.highlight-box-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+
+.highlight-box p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text);
+  opacity: 0.9;
+}
+
+.highlight-box .verse-inline {
+  display: block;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--accent);
+  line-height: 1.55;
+}
+
+@media (min-width: 900px) {
+  .video-row {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    scroll-snap-type: none;
+  }
+  .video-card {
+    flex: 1 1 calc(33% - 0.7rem);
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card { padding: 1.1rem; }
+  .daily-verse-card { padding: 1.25rem 1rem; }
+  .card-grid { grid-template-columns: 1fr; }
+}

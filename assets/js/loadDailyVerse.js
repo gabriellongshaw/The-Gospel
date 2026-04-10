@@ -1,18 +1,22 @@
 import { verses } from './verses.js';
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-app.js";
-import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
 
 const hardcodedExplanations = {
-  "John 3:16 (NKJV)": "God loves the world so much that He gave His only Son, Jesus. Anyone who trusts in Jesus won't be lost forever but will get to live with God eternally.",
-  "Romans 6:23 (NKJV)": "The penalty for doing wrong (sin) is spiritual death, but God's free gift is a forever life, which you get through Jesus Christ.",
-  "John 14:6 (NKJV)": "Jesus is saying He is the only path to God, the complete truth about life, and the source of real, eternal life.",
-  "Isaiah 9:6 (NKJV)": "This is a prophecy about Jesus, saying He would be born as a human but have divine roles: a brilliant guide, a powerful God, a never-ending father figure, and a ruler who brings peace.",
-  "Luke 1:30-33 (NKJV)": "An angel told Mary she was special and would have a Son, Jesus, who is the Son of God. He'll be a great king whose rule will last forever.",
-  "Matthew 2:10-11 (NKJV)": "When the wise men found Jesus, they were overjoyed. They bowed down and gave Him expensive, symbolic gifts (gold, frankincense, and myrrh).",
-  "Romans 5:8 (NKJV)": "God proved His love: even when we were doing things wrong (sinning) and deserved nothing, Jesus died for us.",
-  "1 Peter 1:3 (NKJV)": "Praise God! Because He is so kind and merciful, He gave us a new life and a solid hope for the future by raising Jesus from the dead.",
-  "Luke 15:20 (NKJV)": "The father spotted his son returning from a long way off, felt overwhelming pity, ran to him, and hugged him immediately. This shows God's eager forgiveness.",
-  "Luke 10:36-37 (NKJV)": "Jesus asks who acted like a true neighbor (the Samaritan, who was kind). He then tells us to go and act the same way—show real kindness and help to anyone in need.",
+  "Psalm 23:1 (NKJV)": "God takes care of me completely, like a shepherd cares for his sheep — so I have everything I truly need.",
+  "John 3:16 (NKJV)": "God loves us so much that He gave His own Son. Anyone who trusts in Jesus won't face eternal separation from God, but will live with Him forever.",
+  "Philippians 4:13 (NKJV)": "I can handle any situation because Christ gives me His strength — it's not about my own ability.",
+  "Deuteronomy 31:6 (NKJV)": "Be brave — God is always with you and will never walk away from you.",
+  "Proverbs 3:5-6 (NKJV)": "Trust God completely rather than relying on your own logic. Put Him first in everything, and He will guide your path.",
+  "Isaiah 41:10 (NKJV)": "Don't be afraid — God is with you. He will make you strong and hold you up.",
+  "Galatians 5:22-23 (NKJV)": "When God's Spirit lives in us, He produces real fruit in our lives: love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, and self-control.",
+  "Romans 8:28 (NKJV)": "For those who love God, He works every situation — even hard ones — for their good.",
+  "John 10:10 (NKJV)": "Jesus came so we could have a full, rich, abundant life — not just to rescue us from punishment.",
+  "2 Corinthians 5:17 (NKJV)": "When someone puts their faith in Christ, they become a completely new person. Their old self is gone — they are brand new.",
+  "Romans 5:1 (NKJV)": "Because we have been made right with God through faith in Jesus, we now have peace with God. That conflict is over.",
+  "Hebrews 8:12 (NKJV)": "Under the new covenant, God promises to completely forgive our sins and remember them no more.",
+  "Ephesians 2:8-9 (NKJV)": "Salvation is a free gift from God — not something we earn by being good. We receive it by trusting in Jesus.",
+  "Romans 6:14 (NKJV)": "Sin is no longer your master. You are not under law but under grace — freely loved and accepted.",
 };
 
 const firebaseConfig = {
@@ -28,120 +32,91 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-function formatDate(date) {
-  return date.toISOString().split('T')[0];
-}
+function setupSimpleExplBtn(button, explanationText) {
+  const containerId = `explanation-${button.dataset.verseRef}`;
+  const container = document.getElementById(containerId);
+  if (!container) return;
 
-function setupSimpleExplanationButtons(dailyVerseExplanation) {
-  const buttons = document.querySelectorAll('.simple-explanation-btn');
-  
-  buttons.forEach(button => {
-    const verseRef = button.dataset.verseRef;
-    const explanationContainer = document.getElementById(`explanation-${verseRef}`);
-    
-    if (!explanationContainer) return;
-    
-    let explanationText = "";
-    
-    if (verseRef === 'daily') {
-      explanationText = dailyVerseExplanation || "Loading simpler explanation...";
-    }
+  const inner = container.querySelector('.simple-expl-container-inner');
+  if (inner) inner.textContent = explanationText;
 
-    else if (hardcodedExplanations[verseRef]) {
-      explanationText = hardcodedExplanations[verseRef];
-    } else {
-      explanationText = "No simpler explanation found for this verse.";
-    }
-    
-    explanationContainer.innerHTML = `<p>${explanationText}</p>`;
-    
-    explanationContainer.style.maxHeight = null;
-    explanationContainer.classList.remove('open');
-    button.classList.remove('is-open');
-    
-    if (!button.hasAttribute('data-listener-added')) {
-      
-      const transitionEndHandler = () => {
-        if (!explanationContainer.classList.contains('open')) {
-          
-          explanationContainer.style.maxHeight = null;
-        }
-        explanationContainer.removeEventListener('transitionend', transitionEndHandler);
-      };
-      
-      button.addEventListener('click', () => {
-        const isOpening = !explanationContainer.classList.contains('open');
-        
-        if (isOpening) {
-          explanationContainer.removeEventListener('transitionend', transitionEndHandler);
-          
-          explanationContainer.style.maxHeight = explanationContainer.scrollHeight + "px";
-          explanationContainer.classList.add('open');
-          
-          button.textContent = 'Hide Explanation';
-          button.classList.add('is-open');
-        } else {
-          
-          explanationContainer.style.maxHeight = explanationContainer.scrollHeight + "px";
-          explanationContainer.classList.remove('open');
-          
-          requestAnimationFrame(() => {
-            explanationContainer.style.maxHeight = '0';
-          });
-          
-          explanationContainer.addEventListener('transitionend', transitionEndHandler);
-          
-          button.textContent = 'Show Simpler Explanation';
-          button.classList.remove('is-open');
-        }
+  if (button.hasAttribute('data-listener-added')) return;
+  button.setAttribute('data-listener-added', 'true');
+
+  button.addEventListener('click', () => {
+    const isOpen = container.classList.contains('open');
+
+    if (isOpen) {
+      const h = container.scrollHeight;
+      container.style.height = h + 'px';
+      container.classList.remove('open');
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          container.style.height = '0px';
+          container.style.opacity = '0';
+        });
       });
-      button.setAttribute('data-listener-added', 'true');
-    }
-    
-    if (verseRef === 'daily' && dailyVerseExplanation) {
-      button.style.display = 'inline-block';
+      container.addEventListener('transitionend', function h2() {
+        container.style.height = '';
+        container.style.opacity = '';
+        container.removeEventListener('transitionend', h2);
+      }, { once: true });
+      button.textContent = 'Show Simpler Explanation';
+    } else {
+      container.classList.add('open');
+      container.style.height = '0px';
+      container.style.opacity = '0';
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          container.style.height = container.scrollHeight + 'px';
+          container.style.opacity = '1';
+        });
+      });
+      container.addEventListener('transitionend', function h2() {
+        container.style.height = 'auto';
+        container.removeEventListener('transitionend', h2);
+      }, { once: true });
+      button.textContent = 'Hide Explanation';
     }
   });
 }
 
-export async function loadDailyVerse() {
+async function loadDailyVerse() {
   const today = new Date();
-  const todayStr = formatDate(today);
-  
-  const overrideRef = doc(db, "overrides", todayStr);
-  const overrideSnap = await getDoc(overrideRef);
-  
+  const todayStr = today.toISOString().split('T')[0];
+
   let index;
-  
-  if (overrideSnap.exists() && overrideSnap.data().index !== null) {
-    index = overrideSnap.data().index;
-  } else {
+  try {
+    const overrideRef = doc(db, "overrides", todayStr);
+    const overrideSnap = await getDoc(overrideRef);
+    if (overrideSnap.exists() && overrideSnap.data().index !== null) {
+      index = overrideSnap.data().index;
+    } else {
+      index = today.getDate() % verses.length;
+    }
+  } catch {
     index = today.getDate() % verses.length;
   }
-  
+
   const verseData = verses[index];
-  
-  const verseEl = document.getElementById("daily-verse");
-  const reflectionEl = document.getElementById("daily-reflection");
-  
+  const verseEl = document.getElementById('daily-verse');
+  const reflectionEl = document.getElementById('daily-reflection');
+  const btn = document.getElementById('daily-explainer-btn');
+
   if (verseEl && reflectionEl) {
-    verseEl.classList.remove('show');
-    reflectionEl.classList.remove('show');
-
-    verseEl.textContent = `"${verseData.text}" ${verseData.reference}`;
-
+    verseEl.textContent = `"${verseData.text}" — ${verseData.reference}`;
     reflectionEl.textContent = verseData.reflection;
-  
     requestAnimationFrame(() => {
       verseEl.classList.add('show');
       reflectionEl.classList.add('show');
     });
-  
-    setupSimpleExplanationButtons(verseData.simple_explanation);
+  }
+
+  if (btn && verseData.simple_explanation) {
+    btn.style.display = 'inline-block';
+    const explanation = verseData.simple_explanation || hardcodedExplanations[verseData.reference] || '';
+    setupSimpleExplBtn(btn, explanation);
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  loadDailyVerse();
-  setupSimpleExplanationButtons(null);
-});
+document.addEventListener('DOMContentLoaded', loadDailyVerse);

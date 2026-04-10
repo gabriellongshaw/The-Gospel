@@ -1,39 +1,57 @@
 :root {
-  --bg: #ffffff;
-  --header-bg: rgba(255, 255, 255, 1);
-  --menu-bg: rgba(255, 255, 255, 1); 
-  --card-bg: #fafafa;
-  --card-bg-secondary: #f0f0f0;
-  --footer-bg: #eee;
-  --nav-hover: #e7e7e7;
-  --button: #87CEEB;
-  --button-text: #fff;
-  --text: #111111;
-  --link: #0056b3;
-  --border: #d0d0d0;
-  --button-border: #222;
-  --icon: #222222;
-  --accent: #87CEEB;
-  --hero-accent: rgba(0,0,0,0.08);
-  --hover-bg: #e9ecef;
+  --bg: #faf8f5;
+  --header-bg: rgba(250, 248, 245, 0.9);
+  --menu-bg: rgba(248, 246, 242, 0.98);
+  --footer-bg: #f2efe9;
+  --card-bg: #ffffff;
+  --card-bg-secondary: #f5f2ed;
+  --nav-hover: rgba(180, 140, 90, 0.1);
+  --button-bg: #2c1a0e;
+  --button-bg-hover: #4a2f18;
+  --button-text: #faf8f5;
+  --button-secondary-bg: #f0ede8;
+  --button-secondary-text: #2c1a0e;
+  --text: #1a1208;
+  --text-muted: rgba(26, 18, 8, 0.5);
+  --link: #7a4a1e;
+  --border: #e0d9ce;
+  --accent: #b8862a;
+  --accent-light: rgba(184, 134, 42, 0.12);
+  --shadow: rgba(44, 26, 14, 0.07);
+  --hover-bg: #f0ede8;
+  --verse-color: #7a4a1e;
+  --orb1: rgba(184, 134, 42, 0.09);
+  --orb2: rgba(120, 80, 30, 0.07);
+  --orb3: rgba(200, 160, 80, 0.07);
+  --z-header: 900;
+  --z-menu: 950;
 }
 
-body.dark {
-  --bg: #121212;
-  --header-bg: rgba(20, 20, 20, 1);
-  --menu-bg: rgba(0, 0, 0, 1);
-  --card-bg: #1e1e1e;
-  --card-bg-secondary: #151515;
-  --footer-bg: #1a1a1a;
-  --nav-hover: #222222;
-  --button: #87CEEB;
-  --button-text: #fff;
-  --text: #eaeaea;
-  --link: #4da3ff;
-  --border: #333;
-  --button-border: #999;
-  --icon: #eaeaea;
-  --accent: #87CEEB;
-  --hero-accent: rgba(0,0,0,0.3);
-  --hover-bg: #15222b;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0c08;
+    --header-bg: rgba(15, 12, 8, 0.92);
+    --menu-bg: rgba(12, 9, 5, 0.98);
+    --footer-bg: #1a1410;
+    --card-bg: #1c1710;
+    --card-bg-secondary: #141009;
+    --nav-hover: rgba(184, 134, 42, 0.13);
+    --button-bg: #d4a44e;
+    --button-bg-hover: #c4943e;
+    --button-text: #0f0c08;
+    --button-secondary-bg: #221c12;
+    --button-secondary-text: #e8dcc8;
+    --text: #e8dcc8;
+    --text-muted: rgba(232, 220, 200, 0.45);
+    --link: #d4a44e;
+    --border: #2e2618;
+    --accent: #d4a44e;
+    --accent-light: rgba(212, 164, 78, 0.1);
+    --shadow: rgba(0, 0, 0, 0.4);
+    --hover-bg: #201a11;
+    --verse-color: #d4a44e;
+    --orb1: rgba(212, 164, 78, 0.05);
+    --orb2: rgba(160, 110, 40, 0.04);
+    --orb3: rgba(240, 190, 90, 0.04);
+  }
 }
