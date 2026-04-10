@@ -42,7 +42,6 @@
   line-height: 1.55;
 }
 
-/* Daily verse card */
 .daily-verse-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -98,7 +97,6 @@
   transform: translateY(0);
 }
 
-/* Simple explanation button + container */
 .simple-expl-btn {
   display: inline-flex;
   align-items: center;
@@ -116,7 +114,7 @@
   overflow: hidden;
   max-width: 220px;
   width: 220px;
-  transition: border-color 0.25s, background 0.25s, width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.2s, background 0.2s, width 0.3s;
 }
 
 .simple-expl-btn:hover {
@@ -126,7 +124,7 @@
 
 .simple-expl-btn-text {
   display: inline-block;
-  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+  transition: transform 0.2s, opacity 0.2s ease;
   transform: translateX(0);
   opacity: 1;
 }
@@ -137,7 +135,7 @@
 }
 
 .simple-expl-btn.shrinking {
-  width: 44px;
+  width: 180px;
 }
 
 .simple-expl-btn.expanding {
@@ -169,7 +167,6 @@
   line-height: 1.6;
 }
 
-/* Video cards */
 .video-row {
   display: flex;
   gap: 1rem;
@@ -238,7 +235,6 @@
   margin-top: 0.2rem;
 }
 
-/* Feeling / scripture cards */
 .feeling-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -267,7 +263,6 @@
   line-height: 1.5;
 }
 
-/* CTA buttons */
 .btn-primary {
   display: inline-block;
   padding: 0.65rem 1.5rem;
@@ -315,7 +310,6 @@
   gap: 0.6rem;
 }
 
-/* Highlight / covenant box */
 .highlight-box {
   background: var(--accent-light);
   border: 1px solid var(--accent);
