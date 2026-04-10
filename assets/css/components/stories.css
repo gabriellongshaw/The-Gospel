@@ -1,0 +1,126 @@
+.story-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.story-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.story-item[open] {
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.story-summary {
+  padding: 1rem 1.25rem;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text);
+  transition: color 0.2s;
+  user-select: none;
+  line-height: 1.4;
+  gap: 0.75rem;
+}
+
+.story-summary::-webkit-details-marker {
+  display: none;
+}
+
+.story-item[open] .story-summary {
+  color: var(--accent);
+}
+
+.story-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.story-item[open] .story-icon {
+  transform: rotate(135deg);
+}
+
+.story-body {
+  overflow: hidden;
+  height: 0;
+  border-top: 0px solid var(--border);
+  transition: height 0.35s ease;
+}
+
+.story-item[open] .story-body {
+  border-top-width: 1px;
+}
+
+.story-body-inner {
+  padding: 1rem 1.25rem 1.25rem;
+  font-size: 0.96rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.story-body-inner p + p {
+  margin-top: 0.8rem;
+}
+
+.story-scripture {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  color: var(--verse-color);
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--accent);
+  margin: 0.8rem 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.faq-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+}
+
+.faq-q {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+  color: var(--text);
+}
+
+.faq-a {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text);
+  opacity: 0.85;
+  padding: 0.7rem 0.9rem;
+  background: var(--card-bg-secondary);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 1rem;
+}
+
+.faq-a:last-child {
+  margin-bottom: 0;
+}

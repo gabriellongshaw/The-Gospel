@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap');
+
 *,
 *::before,
 *::after {
@@ -7,21 +9,31 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html,
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(180, 140, 90, 0.25) transparent;
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
   background: var(--bg);
   color: var(--text);
-  transition: background 0.2s, color 0.2s;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(180,140,90,0.25); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(180,140,90,0.5); }
 
 a {
   color: var(--link);
@@ -31,5 +43,52 @@ a {
 img {
   max-width: 100%;
   display: block;
-  border-radius: 8px;
+  border-radius: 10px;
+}
+
+main {
+  flex: 1;
+}
+
+.content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem;
+  width: 100%;
+}
+
+.section-heading {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.section-heading-center {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.verse-inline {
+  font-family: 'Lora', Georgia, serif;
+  font-style: italic;
+  color: var(--verse-color);
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
