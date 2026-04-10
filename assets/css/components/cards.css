@@ -120,20 +120,22 @@
 }
 
 .simple-expl-container {
-  overflow: hidden;
-  height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
   opacity: 0;
-  transition: height 0.35s ease, opacity 0.3s ease;
+  transition: grid-template-rows 0.38s ease, opacity 0.32s ease, margin-top 0.38s ease;
   margin-top: 0;
-  border-radius: 8px;
   text-align: left;
 }
 
 .simple-expl-container.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
   margin-top: 0.75rem;
 }
 
 .simple-expl-container-inner {
+  overflow: hidden;
   padding: 0.9rem 1rem;
   background: var(--card-bg-secondary);
   border: 1px solid var(--border);

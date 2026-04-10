@@ -33,7 +33,6 @@ export default defineConfig({
         chunkFileNames: 'assets/js/[hash].js',
         assetFileNames: (assetInfo) => {
           const originalPath = assetInfo.originalFileName || '';
-          
           if (originalPath.includes('assets/images/logo/favicon/')) {
             return 'assets/images/logo/favicon/[name][extname]';
           }

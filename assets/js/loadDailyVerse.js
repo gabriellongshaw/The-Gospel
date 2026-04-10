@@ -45,39 +45,8 @@ function setupSimpleExplBtn(button, explanationText) {
 
   button.addEventListener('click', () => {
     const isOpen = container.classList.contains('open');
-
-    if (isOpen) {
-      const h = container.scrollHeight;
-      container.style.height = h + 'px';
-      container.classList.remove('open');
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          container.style.height = '0px';
-          container.style.opacity = '0';
-        });
-      });
-      container.addEventListener('transitionend', function h2() {
-        container.style.height = '';
-        container.style.opacity = '';
-        container.removeEventListener('transitionend', h2);
-      }, { once: true });
-      button.textContent = 'Show Simpler Explanation';
-    } else {
-      container.classList.add('open');
-      container.style.height = '0px';
-      container.style.opacity = '0';
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          container.style.height = container.scrollHeight + 'px';
-          container.style.opacity = '1';
-        });
-      });
-      container.addEventListener('transitionend', function h2() {
-        container.style.height = 'auto';
-        container.removeEventListener('transitionend', h2);
-      }, { once: true });
-      button.textContent = 'Hide Explanation';
-    }
+    container.classList.toggle('open', !isOpen);
+    button.textContent = isOpen ? 'Show Simpler Explanation' : 'Hide Explanation';
   });
 }
 

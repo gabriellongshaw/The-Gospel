@@ -43,10 +43,6 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .footer-cols {
-    flex-direction: column;
-    gap: 0.9rem;
-  }
   .video-card {
     flex: 0 0 85%;
   }
@@ -67,17 +63,6 @@
     max-width: 240px;
     text-align: center;
   }
-}
-
-/* Nav breakpoint */
-@media (max-width: 768px) {
-  .nav { display: none; }
-  .burger-btn { display: flex; }
-}
-
-@media (min-width: 769px) {
-  .burger-btn { display: none; }
-  .nav { display: flex; }
 }
 
 /* Desktop */
