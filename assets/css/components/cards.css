@@ -136,6 +136,7 @@
 
 .video-card {
   flex: 0 0 80%;
+  max-width: 320px;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 12px;

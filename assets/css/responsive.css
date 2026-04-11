@@ -74,7 +74,7 @@
     scroll-snap-type: none;
   }
   .video-card {
-    flex: 1 1 calc(33% - 0.7rem);
+    flex: 0 0 calc(33.333% - 0.67rem);
     max-width: 350px;
   }
 }
