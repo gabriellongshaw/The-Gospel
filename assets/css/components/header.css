@@ -30,7 +30,7 @@
 .brand img {
   height: 28px;
   width: 28px;
-  border-radius: 12px;
+  border-radius: 8px;
   object-fit: contain;
 }
 
@@ -86,10 +86,6 @@
   padding: 8px;
   border-radius: 8px;
   transition: background 0.2s ease;
-}
-
-.burger-btn:hover {
-  background: var(--nav-hover);
 }
 
 .burger-btn span {
