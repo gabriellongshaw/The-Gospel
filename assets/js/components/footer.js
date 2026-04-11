@@ -36,7 +36,7 @@ export function createFooter() {
       <div class="footer-bottom">
         <p>© <span class="footer-year"></span> The Gospel. All rights reserved.</p>
         <p>"I am the way, the truth, and the life. No one comes to the Father except through Me." — John 14:6 NKJV</p>
-        <p class="footer-devby">Designed and developed by <a href="https://www.gabriellongshaw.co.uk" target="_blank" rel="noopener">Gabriel Longshaw</a>.</p>
+        <p class="copyright">Designed and developed by <a href="https://www.gabriellongshaw.co.uk" target="_blank" rel="noopener">Gabriel Longshaw</a>.</p>
       </div>
     </div>
   `;

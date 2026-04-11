@@ -82,7 +82,6 @@
   text-align: center;
   font-size: 0.8rem;
   color: var(--text);
-  opacity: 0.5;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
@@ -95,11 +94,15 @@
   text-underline-offset: 2px;
 }
 
-.footer-devby a {
+.copyright {
+  margin-top: 0.5rem;
+}
+
+.copyright a {
   transition: color 0.2s ease;
 }
 
-.footer-devby a:hover {
+.copyright a:hover {
   color: var(--accent);
   opacity: 1;
 }
