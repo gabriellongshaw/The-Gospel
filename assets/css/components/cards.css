@@ -126,13 +126,16 @@
   display: flex;
   gap: 1rem;
   overflow-x: auto;
-  padding-bottom: 0.5rem;
+  overflow-y: visible;
+  padding-bottom: 0.75rem;
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: thin;
+  scroll-padding-left: 0;
 }
 
 .video-card {
-  flex: 0 0 min(78%, 320px);
+  flex: 0 0 80%;
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 12px;

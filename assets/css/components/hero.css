@@ -5,9 +5,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 7rem 1rem 4rem;
+  padding: 6rem 1rem 3.5rem;
   overflow: hidden;
-  min-height: 72vh;
+  min-height: 60vh;
 }
 
 .hero-bg-image {
@@ -91,7 +91,7 @@
 
 .hero-title {
   font-family: 'Lora', Georgia, serif;
-  font-size: clamp(2rem, 6vw, 4rem);
+  font-size: 2rem;
   font-weight: 600;
   line-height: 1.15;
   color: var(--text);
@@ -103,7 +103,7 @@
 
 .hero-verse {
   font-family: 'Lora', Georgia, serif;
-  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  font-size: 1rem;
   font-style: italic;
   color: var(--verse-color);
   max-width: 560px;
@@ -128,12 +128,21 @@
   gap: 0.75rem;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   opacity: 0;
   animation: fadeUp 0.7s ease 0.5s forwards;
 }
 
+.hero-button-row .button {
+  width: 100%;
+  max-width: 240px;
+  text-align: center;
+  justify-content: center;
+}
+
 .page-hero {
-  padding: 5.5rem 1.25rem 3rem;
+  padding: 5rem 1rem 2.5rem;
   min-height: unset;
 }
 

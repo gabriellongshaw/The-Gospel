@@ -1,7 +1,7 @@
 :root {
   --bg: #faf8f5;
   --header-bg: rgba(250, 248, 245, 0.9);
-  --menu-bg: rgba(248, 246, 242, 0.98);
+  --menu-bg: rgba(248, 246, 242, 0.9);
   --footer-bg: #f2efe9;
   --card-bg: #ffffff;
   --card-bg-secondary: #f5f2ed;
@@ -30,8 +30,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #0f0c08;
-    --header-bg: rgba(15, 12, 8, 0.92);
-    --menu-bg: rgba(12, 9, 5, 0.98);
+    --header-bg: rgba(15, 12, 8, 0.9);
+    --menu-bg: rgba(12, 9, 5, 0.9);
     --footer-bg: #1a1410;
     --card-bg: #1c1710;
     --card-bg-secondary: #141009;
