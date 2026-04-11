@@ -5,9 +5,20 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 7rem 1.25rem 4.5rem;
+  padding: 7rem 1rem 4rem;
   overflow: hidden;
   min-height: 72vh;
+}
+
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-bg-image);
+  background-size: cover;
+  background-position: center;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, transparent 100%);
+  pointer-events: none;
 }
 
 .hero-bg-orbs {
@@ -15,6 +26,8 @@
   inset: 0;
   pointer-events: none;
   overflow: hidden;
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
 }
 
 .hero-orb {
@@ -66,7 +79,7 @@
 }
 
 .hero-eyebrow {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -78,7 +91,7 @@
 
 .hero-title {
   font-family: 'Lora', Georgia, serif;
-  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 600;
   line-height: 1.15;
   color: var(--text);
@@ -97,65 +110,26 @@
   line-height: 1.6;
   margin-bottom: 0.4rem;
   opacity: 0;
-  animation: fadeUp 0.65s ease 0.3s forwards;
+  animation: fadeUp 0.7s ease 0.3s forwards;
 }
 
 .hero-verse-ref {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--accent);
   letter-spacing: 0.08em;
   margin-bottom: 2rem;
   opacity: 0;
-  animation: fadeUp 0.65s ease 0.38s forwards;
+  animation: fadeUp 0.7s ease 0.4s forwards;
 }
 
-.hero-cta {
-  display: inline-block;
-  padding: 0.7rem 1.8rem;
-  background: var(--button-bg);
-  color: var(--button-text);
-  font-size: 0.9rem;
-  font-weight: 500;
-  border-radius: 50px;
-  transition: background 0.2s, transform 0.2s, opacity 0.2s;
-  opacity: 0;
-  animation: fadeUp 0.65s ease 0.46s forwards;
-  letter-spacing: 0.02em;
-}
-
-.hero-cta:hover {
-  background: var(--button-bg-hover);
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.hero-cta-secondary {
-  display: inline-block;
-  padding: 0.7rem 1.8rem;
-  background: var(--button-secondary-bg);
-  color: var(--button-secondary-text);
-  font-size: 0.9rem;
-  font-weight: 500;
-  border-radius: 50px;
-  border: 1px solid var(--border);
-  transition: background 0.2s, transform 0.2s, opacity 0.2s;
-  opacity: 0;
-  animation: fadeUp 0.65s ease 0.52s forwards;
-  letter-spacing: 0.02em;
-}
-
-.hero-cta-secondary:hover {
-  background: var(--hover-bg);
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.hero-cta-row {
+.hero-button-row {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.5s forwards;
 }
 
 .page-hero {

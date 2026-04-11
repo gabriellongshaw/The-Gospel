@@ -1,0 +1,88 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.button-primary {
+  background: var(--button-bg);
+  color: var(--button-text);
+}
+
+.button-primary:hover {
+  background: var(--button-bg-hover);
+  transform: translateY(-1px);
+}
+
+.button-secondary {
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  border: 1px solid var(--border);
+}
+
+.button-secondary:hover {
+  background: var(--hover-bg);
+  transform: translateY(-1px);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.simple-expl-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.25rem;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 220px;
+  width: 220px;
+  transition: border-color 0.2s ease, background 0.2s ease, width 0.3s ease;
+}
+
+.simple-expl-button:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+.simple-expl-button-text {
+  display: inline-block;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.simple-expl-button.animating .simple-expl-button-text {
+  transform: translateX(8px);
+  opacity: 0;
+}
+
+.simple-expl-button.shrinking {
+  width: 180px;
+}
+
+.simple-expl-button.expanding {
+  width: 220px;
+}

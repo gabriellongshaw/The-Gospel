@@ -33,7 +33,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 function animateBtnText(button, newText) {
-  const span = button.querySelector('.simple-expl-btn-text');
+  const span = button.querySelector('.simple-expl-button-text');
   if (!span) return;
 
   button.classList.add('animating');

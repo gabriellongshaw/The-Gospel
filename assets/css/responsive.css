@@ -2,10 +2,9 @@
   .hero-title {
     font-size: 1.75rem;
   }
-  .hero-cta,
-  .hero-cta-secondary {
+  .hero-button-row .button {
     padding: 0.6rem 1.3rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
   .content {
     padding: 1.5rem 0.9rem;
@@ -18,7 +17,7 @@
   }
   .story-summary {
     padding: 0.85rem 1rem;
-    font-size: 0.92rem;
+    font-size: 0.9375rem;
   }
   .story-body-inner {
     padding: 0.85rem 1rem 1rem;
@@ -37,7 +36,7 @@
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
-  .btn-row {
+  .button-row {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -63,16 +62,16 @@
   .hero-title {
     font-size: 2rem;
   }
-  .hero-cta-row {
+  .hero-button-row {
     flex-direction: column;
     align-items: center;
     gap: 0.6rem;
   }
-  .hero-cta,
-  .hero-cta-secondary {
+  .hero-button-row .button {
     width: 100%;
     max-width: 240px;
     text-align: center;
+    justify-content: center;
   }
 }
 
@@ -171,19 +170,12 @@
   }
 }
 
-@media (orientation: landscape) and (max-height: 500px) {
-  .hero-section {
-    min-height: unset;
-    padding: 5rem 1.25rem 2.5rem;
-  }
-  .page-hero {
-    padding: 4.5rem 1.25rem 2rem;
-  }
-}
-
 @media (orientation: landscape) and (max-height: 520px) {
   .hero-section {
     min-height: unset;
     padding: 5rem 1.25rem 3rem;
+  }
+  .page-hero {
+    padding: 4.5rem 1.25rem 2rem;
   }
 }

@@ -9,7 +9,7 @@
   padding: 1.4rem 1.5rem;
   border-radius: 14px;
   border: 1px solid var(--border);
-  transition: box-shadow 0.25s, transform 0.25s;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .card:hover {
@@ -19,15 +19,15 @@
 
 .card-title {
   font-family: 'Lora', Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   font-weight: 600;
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.5rem;
   color: var(--text);
   line-height: 1.3;
 }
 
 .card p {
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   color: var(--text);
   opacity: 0.85;
   line-height: 1.65;
@@ -62,7 +62,7 @@
 
 .daily-verse-text {
   font-family: 'Lora', Georgia, serif;
-  font-size: 1.15rem;
+  font-size: 1.125rem;
   font-style: italic;
   color: var(--verse-color);
   line-height: 1.6;
@@ -78,7 +78,7 @@
 }
 
 .daily-reflection {
-  font-size: 0.92rem;
+  font-size: 0.9375rem;
   color: var(--text);
   background: var(--hover-bg);
   padding: 0.9rem 1rem;
@@ -95,51 +95,6 @@
 .daily-reflection.show {
   opacity: 1;
   transform: translateY(0);
-}
-
-.simple-expl-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0.25rem;
-  padding: 0.5rem 1.1rem;
-  border: 1px solid var(--border);
-  border-radius: 50px;
-  background: var(--button-secondary-bg);
-  color: var(--button-secondary-text);
-  font-size: 0.88rem;
-  cursor: pointer;
-  font-family: inherit;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 220px;
-  width: 220px;
-  transition: border-color 0.2s, background 0.2s, width 0.3s;
-}
-
-.simple-expl-btn:hover {
-  border-color: var(--accent);
-  background: var(--accent-light);
-}
-
-.simple-expl-btn-text {
-  display: inline-block;
-  transition: transform 0.2s, opacity 0.2s ease;
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.simple-expl-btn.animating .simple-expl-btn-text {
-  transform: translateX(8px);
-  opacity: 0;
-}
-
-.simple-expl-btn.shrinking {
-  width: 180px;
-}
-
-.simple-expl-btn.expanding {
-  width: 220px;
 }
 
 .simple-expl-container {
@@ -163,7 +118,7 @@
   background: var(--card-bg-secondary);
   border: 1px solid var(--border);
   border-radius: 8px;
-  font-size: 0.92rem;
+  font-size: 0.9375rem;
   line-height: 1.6;
 }
 
@@ -183,7 +138,7 @@
   border-radius: 12px;
   overflow: hidden;
   scroll-snap-align: start;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .video-card:hover {
@@ -197,7 +152,8 @@
   text-decoration: none;
 }
 
-.video-card img, .video-card iframe {
+.video-card img,
+.video-card iframe {
   width: 100%;
   height: 170px;
   object-fit: cover;
@@ -223,14 +179,14 @@
 
 .video-card-title {
   font-family: 'Lora', Georgia, serif;
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   line-height: 1.35;
   color: var(--text);
 }
 
 .video-card-sub {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--text-muted);
   margin-top: 0.2rem;
 }
@@ -240,7 +196,7 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1.1rem 1.25rem;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .feeling-card:hover {
@@ -263,53 +219,6 @@
   line-height: 1.5;
 }
 
-.btn-primary {
-  display: inline-block;
-  padding: 0.65rem 1.5rem;
-  background: var(--button-bg);
-  color: var(--button-text);
-  font-size: 0.88rem;
-  font-weight: 500;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  text-decoration: none;
-  letter-spacing: 0.02em;
-}
-
-.btn-primary:hover {
-  background: var(--button-bg-hover);
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.btn-secondary {
-  display: inline-block;
-  padding: 0.65rem 1.5rem;
-  background: var(--button-secondary-bg);
-  color: var(--button-secondary-text);
-  font-size: 0.88rem;
-  font-weight: 500;
-  border-radius: 50px;
-  border: 1px solid var(--border);
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  text-decoration: none;
-}
-
-.btn-secondary:hover {
-  background: var(--hover-bg);
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.btn-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
 .highlight-box {
   background: var(--accent-light);
   border: 1px solid var(--accent);
@@ -326,7 +235,7 @@
 }
 
 .highlight-box p {
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   line-height: 1.65;
   color: var(--text);
   opacity: 0.9;
