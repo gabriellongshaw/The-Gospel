@@ -92,3 +92,36 @@ main {
   opacity: 1;
   transform: translateY(0);
 }
+
+.text-body {
+  font-size: 0.97rem;
+  opacity: 0.85;
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+  line-height: 1.75;
+}
+
+.text-intro {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 1.25rem;
+  max-width: 650px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.hero-verse-plain {
+  font-style: normal;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.hidden {
+  display: none;
+}
