@@ -48,18 +48,19 @@
   background: var(--text);
   border-radius: 2px;
   transform-origin: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.mobile-close-btn span:nth-child(1) {
+.mobile-menu.active .mobile-close-btn span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
 
-.mobile-close-btn span:nth-child(2) {
+.mobile-menu.active .mobile-close-btn span:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
 
-.mobile-close-btn span:nth-child(3) {
+.mobile-menu.active .mobile-close-btn span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
@@ -130,13 +131,13 @@
 .mobile-menu-verse {
   font-family: 'Lora', Georgia, serif;
   font-style: italic;
-  font-size: 0.81rem;
+  font-size: 0.85rem;
   color: var(--verse-color);
   text-align: center;
   max-width: 240px;
   line-height: 1.55;
   opacity: 0;
-  transform: scale(0.7);
+  transform: scale(0.8);
   transition: opacity 0.2s ease, transform 0.5s ease;
 }
 
