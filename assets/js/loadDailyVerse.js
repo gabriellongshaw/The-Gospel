@@ -85,6 +85,9 @@ async function loadDailyVerse() {
   const today = new Date();
   const todayStr = today.toISOString().split('T')[0];
 
+  const startOfYear = new Date(today.getFullYear(), 0, 0);
+  const dayOfYear = Math.floor((today - startOfYear) / 86400000);
+
   let index;
   try {
     const overrideRef = doc(db, "overrides", todayStr);
@@ -92,10 +95,10 @@ async function loadDailyVerse() {
     if (overrideSnap.exists() && overrideSnap.data().index !== null) {
       index = overrideSnap.data().index;
     } else {
-      index = today.getDate() % verses.length;
+      index = dayOfYear % verses.length;
     }
   } catch {
-    index = today.getDate() % verses.length;
+    index = dayOfYear % verses.length;
   }
 
   const verseData = verses[index];
