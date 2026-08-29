@@ -1,5 +1,5 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "installCommand": "git config --global url.\"https://${GH_PAT}@github.com/\".insteadOf \"https://github.com/\" && git config --global url.\"https://${GH_PAT}@github.com/\".insteadOf \"ssh://git@github.com/\" && npm install"
+  "installCommand": "git config --global url.\"https://${GH_PRESET_TOKEN}@github.com/\".insteadOf \"https://github.com/\" && git config --global url.\"https://${GH_PAT}@github.com/\".insteadOf \"ssh://git@github.com/\" && npm install"
 }
