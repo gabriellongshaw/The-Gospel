@@ -45,8 +45,7 @@ function animateBtnText(button, newText) {
 }
 
 function setupSimpleExplBtn(button, explanationText) {
-  const containerId = `explanation-${button.dataset.verseRef}`;
-  const container = document.getElementById(containerId);
+  const container = document.querySelector(`[data-explanation="${button.dataset.verseRef}"]`);
   if (!container) return;
 
   const inner = container.querySelector('.simple-expl-container-inner');
@@ -88,17 +87,16 @@ async function loadDailyVerse() {
   const startOfYear = new Date(today.getFullYear(), 0, 0);
   const dayOfYear = Math.floor((today - startOfYear) / 86400000);
 
-  let index;
+  const defaultIndex = dayOfYear % verses.length;
+  let index = defaultIndex;
   try {
     const overrideRef = doc(db, "overrides", todayStr);
-    const overrideSnap = await getDoc(overrideRef);
+    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 2500));
+    const overrideSnap = await Promise.race([getDoc(overrideRef), timeout]);
     if (overrideSnap.exists() && overrideSnap.data().index !== null) {
       index = overrideSnap.data().index;
-    } else {
-      index = dayOfYear % verses.length;
     }
   } catch {
-    index = dayOfYear % verses.length;
   }
 
   const verseData = verses[index];
