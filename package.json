@@ -12,5 +12,8 @@
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1"
+  },
+	"scripts": {
+    "build": "npm install git+https://github.com/gabriellongshaw/vite-site-preset.git && vite build"
   }
 }
